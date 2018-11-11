@@ -1,12 +1,12 @@
-package com.ppx.bipro;
+package com.ppx.bi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BiproApplication {
+public class BiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BiproApplication.class, args);
+        SpringApplication.run(BiApplication.class, args);
     }
 }
