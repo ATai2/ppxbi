@@ -10,14 +10,14 @@ import javax.persistence.*;
 @Getter
 @ToString
 @Entity
-@Table(name = "ppxUser")
+@Table(name = "ppx_user")
 public class PpxUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long userId;
-    @Column(name = "username")
+    @Column(length = 32)
     private String userName;
-    @Column(name = "pwd")
+    @Column(length = 32)
     private String pwd;
     private String role;
 
