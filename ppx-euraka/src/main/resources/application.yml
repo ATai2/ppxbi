@@ -10,6 +10,3 @@ eureka:
     waitTimeInMsWhenSyncEmpty: 0
   instance:
     appname: usermgt
-spring:
-  application:
-    name: userManagement

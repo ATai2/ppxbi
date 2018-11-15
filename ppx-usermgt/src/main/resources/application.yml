@@ -1,7 +1,17 @@
 server:
   port: 8900
 
+#eureka:
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+#  server:
+#    waitTimeInMsWhenSyncEmpty: 0
+#  instance:
+#    appname: usermgt
 spring:
+  application:
+    name: userManagement
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     hikari:
@@ -11,6 +21,12 @@ spring:
     password: root
     url: jdbc:mysql://192.168.1.10:3306/ppx?charset=utf8mb4&useSSL=false
   jpa:
-    database-platform:org.hibernate.dialect.MySQL5InnoDBDialect
-    show-sql:true
-    hibernate.ddl-auto:update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#  jpa:
+#    data
+#    database-platform:org.hibernate.dialect.MySQL5InnoDBDialect
+#    show-sql:true
+#    hibernate.ddl-auto:update

@@ -19,7 +19,7 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.ppx.war.warreport.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.ppx.ppxusermgt.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
