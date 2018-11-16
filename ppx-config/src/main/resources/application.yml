@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ppx-config
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+          username: root
+          password: root
+          search-paths:
+server:
+  port: 7001
+
