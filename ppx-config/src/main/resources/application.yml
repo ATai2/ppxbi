@@ -5,10 +5,11 @@ spring:
     config:
       server:
         git:
-          username: root
-          password: root
-          uri: https://github.com/ATai2/ppxbi/ppx-config
-          search-paths: /properties
+#          username: root
+#          password: root
+          uri: git@github.com:ATai2/ppxbi.git
+          search-paths: /ppx-config/properties/**
+      label: master
 server:
   port: 7001
 
