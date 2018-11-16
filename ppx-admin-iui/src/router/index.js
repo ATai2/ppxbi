@@ -35,6 +35,16 @@ export const constantRouterMap = [
       path: 'dashboard',
       component: () => import('@/views/dashboard/index')
     }]
+  },  {
+    path: '/user',
+    component: Layout,
+    redirect: '/user',
+    name: 'User',
+    hidden: true,
+    children: [{
+      path: 'user',
+      component: () => import('@/views/user/index')
+    }]
   },
 
   {
@@ -139,6 +149,17 @@ export const constantRouterMap = [
         meta: { title: 'External Link', icon: 'link' }
       }
     ]
+  },
+  {
+    path: '/ip',
+    component: Layout,
+    redirect: '/ippool',
+    name: 'Ippool',
+    hidden: true,
+    children: [{
+      path: 'ippool',
+      component: () => import('@/views/dashboard/index')
+    }]
   },
 
   { path: '*', redirect: '/404', hidden: true }
