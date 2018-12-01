@@ -6,7 +6,10 @@
     <groupId>com.ppx</groupId>
     <artifactId>bipro</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>scalademo</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>bipro</name>
     <description>Demo project for Spring Boot</description>
