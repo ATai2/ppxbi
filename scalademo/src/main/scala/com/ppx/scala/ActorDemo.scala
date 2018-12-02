@@ -1,6 +1,6 @@
 package com.ppx.scala
 
-import akka.actor.Actor
+//import akka.actor.Actor
 
 class ActorDemo {
 
