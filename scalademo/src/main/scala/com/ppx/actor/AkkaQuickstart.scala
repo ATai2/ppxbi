@@ -22,7 +22,7 @@ class Greeter(message: String, printerActor: ActorRef) extends Actor {
 
   var greeting = ""
 
-  def receive = {
+  def receive: PartialFunction[Any, Unit] = {
     case WhoToGreet(who) =>
       greeting = message + ", " + who
     case Greet           =>
