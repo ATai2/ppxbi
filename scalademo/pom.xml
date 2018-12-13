@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <!--<parent>-->
-        <!--<artifactId>bipro</artifactId>-->
-        <!--<groupId>com.ppx</groupId>-->
-        <!--<version>0.0.1-SNAPSHOT</version>-->
-    <!--</parent>-->
+    <parent>
+        <artifactId>bipro</artifactId>
+        <groupId>com.ppx</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
 
     <groupId>cn.itcast.spark</groupId>
     <version>2.0</version>
@@ -16,9 +16,9 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <encoding>UTF-8</encoding>
+        <hadoop.version>2.8.1</hadoop.version>
         <scala.version>2.12.7</scala.version>
         <spark.version>2.4.0</spark.version>
-        <hadoop.version>2.6.4</hadoop.version>
         <scala.compat.version>2.11</scala.compat.version>
         <akka.version>2.4.17</akka.version>
     </properties>
@@ -30,7 +30,12 @@
             <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/com.thoughtworks.paranamer/paranamer   mian方法数组越界 -->
+        <dependency>
+            <groupId>com.thoughtworks.paranamer</groupId>
+            <artifactId>paranamer</artifactId>
+            <version>2.8</version>
+        </dependency>
 
         <dependency>
             <groupId>com.typesafe.akka</groupId>
