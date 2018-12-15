@@ -13,7 +13,7 @@ object AdvUserLocation {
   def main(args: Array[String]) {
     val conf = new SparkConf().setAppName("AdvUserLocation").setMaster("local[2]")
     val sc = new SparkContext(conf)
-    val rdd0 = sc.textFile("c://bs_log").map( line => {
+    val rdd0 = sc.textFile("D:\\code\\ppxbi\\scalademo\\src\\main\\scala\\files\\userlocal").map( line => {
       val fields = line.split(",")
       val eventType = fields(3)
       val time = fields(1)
@@ -26,7 +26,7 @@ object AdvUserLocation {
       val time = t._2
       (lac, (mobile, time))
     })
-    val rdd2 = sc.textFile("c://lac_info.txt").map(line => {
+    val rdd2 = sc.textFile("D:\\code\\ppxbi\\scalademo\\src\\main\\scala\\files\\loc").map(line => {
       val f = line.split(",")
       //(基站ID， （经度，纬度）)
       (f(0), (f(1), f(2)))
@@ -46,8 +46,8 @@ object AdvUserLocation {
       it.toList.sortBy(_._3).reverse.take(2)
     })
         println(rdd1.join(rdd2).collect().toBuffer)
-    //    println(rdd5.collect().toBuffer)
-    rdd5.saveAsTextFile("c://out")
+        println(rdd5.collect().toBuffer)
+//    rdd5.saveAsTextFile("out")
     sc.stop()
   }
 }
