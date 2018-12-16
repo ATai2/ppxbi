@@ -1,0 +1,11 @@
+version: '3'
+services:
+  vnc:
+    restart: always
+    image: dorowu/ubuntu-desktop-lxde-vnc
+    container_name: vnc
+    ports:
+    - 6080:80
+    - 5900:5900
+    environment:
+    - VNC_PASSWORD:123456

@@ -47,7 +47,7 @@ object AdvUserLocation {
     })
         println(rdd1.join(rdd2).collect().toBuffer)
         println(rdd5.collect().toBuffer)
-//    rdd5.saveAsTextFile("out")
+    rdd5.saveAsTextFile("out")
     sc.stop()
   }
 }
