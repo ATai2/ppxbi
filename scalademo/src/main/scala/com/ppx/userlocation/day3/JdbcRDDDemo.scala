@@ -15,7 +15,7 @@ object JdbcRDDDemo {
     val sc = new SparkContext(conf)
     val connection = () => {
       Class.forName("com.mysql.jdbc.Driver").newInstance()
-      DriverManager.getConnection("jdbc:mysql://localhost:3306/bigdata", "root", "123456")
+      DriverManager.getConnection("jdbc:mysql://mini1:3306/bigdata", "root", "123456")
     }
     val jdbcRDD = new JdbcRDD(
       sc,
