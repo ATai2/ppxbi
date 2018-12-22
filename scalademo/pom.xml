@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <parent>
-        <artifactId>bipro</artifactId>
-        <groupId>com.ppx</groupId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
+    <!--<parent>-->
+        <!--<artifactId>bipro</artifactId>-->
+        <!--<groupId>com.ppx</groupId>-->
+        <!--<version>0.0.1-SNAPSHOT</version>-->
+    <!--</parent>-->
 
     <groupId>cn.itcast.spark</groupId>
     <version>2.0</version>
@@ -87,6 +87,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.11</version>
         </dependency>
 
 
@@ -138,10 +139,10 @@
                                         implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>reference.conf</resource>
                                 </transformer>
-                                <!--<transformer-->
-                                        <!--implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">-->
-                                    <!--<mainClass></mainClass>-->
-                                <!--</transformer>-->
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.ppx.userlocation.day3.WordCount</mainClass>
+                                </transformer>
                             </transformers>
                         </configuration>
                     </execution>
