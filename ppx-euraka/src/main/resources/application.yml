@@ -9,4 +9,4 @@ eureka:
   server:
     waitTimeInMsWhenSyncEmpty: 0
   instance:
-    appname: usermgt
+    appname: euraka
