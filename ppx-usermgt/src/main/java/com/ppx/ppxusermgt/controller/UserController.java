@@ -45,8 +45,8 @@ public class UserController {
         userDao.save(user);
         return res;
     }
-
-    @RequestMapping("/demo2")
+    @ApiOperation(value = "test")
+    @PostMapping("/demo2")
     public void demo2(@RequestBody @Valid DemoModel demo, BindingResult result){
         if(result.hasErrors()){
             for (ObjectError error : result.getAllErrors()) {
