@@ -34,3 +34,5 @@ spring:
 #    database-platform:org.hibernate.dialect.MySQL5InnoDBDialect
 #    show-sql:true
 #    hibernate.ddl-auto:update
+logging:
+  config: logback.xml

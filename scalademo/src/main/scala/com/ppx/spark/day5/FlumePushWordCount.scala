@@ -9,7 +9,7 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
   */
 object FlumePushWordCount {
 
-  def main(args: Array[String]) {
+  def runProc(args: Array[String]) {
     val host = args(0)
     val port = args(1).toInt
     LoggerLevels.setStreamingLogLevels()

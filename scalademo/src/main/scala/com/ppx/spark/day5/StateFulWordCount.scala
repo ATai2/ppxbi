@@ -3,12 +3,7 @@ package com.ppx.spark.day5
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.{HashPartitioner, SparkConf, SparkContext}
 
-/**
-  * Created by root on 2016/5/21.
-  */
 object StateFulWordCount {
-
-
   //Seq这个批次某个单词的次数
   //Option[Int]：以前的结果
 
@@ -20,7 +15,7 @@ object StateFulWordCount {
     iter.map{ case(word, current_count, history_count) => (word, current_count.sum + history_count.getOrElse(0)) }
   }
 
-  def main(args: Array[String]) {
+  def runProc(args: Array[String]) {
     LoggerLevels.setStreamingLogLevels()
     //StreamingContext
     val conf = new SparkConf().setAppName("StateFulWordCount").setMaster("local[2]")
@@ -32,13 +27,11 @@ object StateFulWordCount {
     val ds = ssc.socketTextStream("mini1", 8888)
     //DStream是一个特殊的RDD
     //hello tom hello jerry
-    val result = ds.flatMap(_.split(" ")).map((_, 1)).updateStateByKey(updateFunc, new HashPartitioner(sc.defaultParallelism), true)
-
+    val result = ds.flatMap(_.split(" "))
+      .map((_, 1))
+      .updateStateByKey(updateFunc, new HashPartitioner(sc.defaultParallelism), true)
     result.print()
-
     ssc.start()
-
     ssc.awaitTermination()
-
   }
 }
