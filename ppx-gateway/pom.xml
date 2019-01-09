@@ -5,7 +5,7 @@
 
     <groupId>com.ppx</groupId>
     <artifactId>ppx-gateway</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>v1</version>
     <packaging>jar</packaging>
 
     <name>ppx-gateway</name>

@@ -2,27 +2,51 @@ version: '3'
 services:
   euraka:
     restart: always
-    image: atai/euraka:1.0
+    image: atai/ppx-euraka:v1
     container_name: euraka
     ports:
-    - 3306:3306
-  mysql:
+    - 8761:8761
+
+  admin:
     restart: always
-    image: mysql:5.7
-    container_name: mysql
+    image: atai/ppx-admin:v1
+    container_name: ppxadmin
     ports:
-    - 3306:3306
+    - 8910:8910
+    depends_on:
+    - euraka
     environment:
-      TZ: Asia/Shanghai
-      MYSQL_ROOT_PASSWORD: 123456
-    command:
-      --character-set-server=utf8mb4
-      --collation-server=utf8mb4_general_ci
-      --explicit_defaults_for_timestamp=true
-      --lower_case_table_names=1
-      --max_allowed_packet=128M
-      --sql-mode="STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO"
-    volumes:
-    - ./data:/var/lib/mysql
-volumes:
-    data:
+    - eureka.client.serviceUrl.defaultZone=http://euraka:8761/eureka/
+    - spring.application.name= ppx-admin
+#  usermgt:
+#    restart: always
+#    image: atai/ppx-usermgt:v1
+#    container_name: usermgt
+#    ports:
+#    - 8900:8900
+#    depends_on:
+#    - euraka
+#    - mysql
+#    environment:
+#    - spring.datasource.url=dbc:mysql://mysql:3306/atdb?charset=utf8mb4&useSSL=false
+#    - eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/
+#
+#  mysql:
+#    restart: always
+#    image: mysql:5.7
+#    container_name: mysql
+#    ports:
+#    - 3306:3306
+#    environment:
+#      TZ: Asia/Shanghai
+#      MYSQL_ROOT_PASSWORD: root
+#      MYSQL_DATABASE: atdb
+#      MYSQL_ROOT_HOST: '%'
+#    command:
+#      --default-authentication-plugin=mysql_native_password
+#      --character-set-server=utf8mb4
+#      --collation-server=utf8mb4_general_ci
+#      --explicit_defaults_for_timestamp=true
+#      --lower_case_table_names=1
+#      --max_allowed_packet=128M
+#      --sql-mode="STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO"

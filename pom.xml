@@ -22,6 +22,7 @@
     </parent>
 
     <properties>
+        <dockerfile-maven-version>1.4.9</dockerfile-maven-version>
         <docker.image.prefix>atai</docker.image.prefix>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

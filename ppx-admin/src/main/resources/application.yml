@@ -1,0 +1,11 @@
+server:
+  port: 8910
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: ppx-admin
