@@ -16,9 +16,9 @@ public class PpxUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long userId;
-    @Column(length = 32)
+    @Column(length = 32, nullable = false)
     private String userName;
-    @Column(length = 32)
+    @Column(length = 32,nullable = false)
     @JsonIgnore
     private String pwd;
     private String role;

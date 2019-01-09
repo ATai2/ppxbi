@@ -6,6 +6,7 @@ import com.ppx.ppxusermgt.entity.DemoModel;
 import com.ppx.ppxusermgt.entity.PpxUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+@Slf4j
 @RequestMapping(value = "/user")
 @RestController
 @Api(value = "User")
@@ -25,6 +27,7 @@ public class UserController {
     @ApiOperation(value = "获取所有User")
     @GetMapping("/users")
     public CommonResp<List<PpxUser>> getUsers() {
+        log.info("查询用户");
         CommonResp<List<PpxUser>> res = new CommonResp<>();
         res.setData(userDao.findAll());
         return res;
@@ -38,11 +41,11 @@ public class UserController {
         return res;
     }
 
-    @ApiOperation(value = "获取所有User")
-    @PostMapping("/create")
-    public CommonResp<String> createUser(@RequestBody PpxUser user) {
+    @ApiOperation(value = "创建User")
+    @PostMapping("/users")
+    public CommonResp<String> createUser(@RequestBody List<PpxUser> users) {
         CommonResp<String> res = new CommonResp<>();
-        userDao.save(user);
+        userDao.saveAll(users);
         return res;
     }
     @ApiOperation(value = "test")
