@@ -50,6 +50,7 @@
         <jwt.version>0.9.0</jwt.version>
         <hutool.version>4.1.1</hutool.version>
         <springboot.version>2.1.1.RELEASE</springboot.version>
+        <activiti-dependencies.version>7.0.87</activiti-dependencies.version>
     </properties>
 
     <dependencyManagement>
