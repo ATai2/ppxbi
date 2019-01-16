@@ -2,7 +2,7 @@ version: '3'
 services:
   eureka:
     restart: always
-    image: atai/ppx-eureka:v1
+    image: atai2/ppx-eureka:v1
     container_name: eureka
     ports:
     - 8761:8761
@@ -54,6 +54,8 @@ services:
     container_name: mysql
     ports:
     - "3306:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
     environment:
       MYSQL_DATABASE: atdb
       MYSQL_ROOT_PASSWORD: root
@@ -95,15 +97,26 @@ services:
   kafka:
     image: wurstmeister/kafka
     ports:
-    - "9092"
+    - "9092:9092"
+    depends_on:
+    - zookeeper
     environment:
-      KAFKA_ADVERTISED_HOST_NAME: 192.168.1.5
-      KAFKA_CREATE_TOPICS: "test:1:1"
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_HOST_NAME: 192.168.1.6
+      KAFKA_ADVERTISED_PORT: 9092
+      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
+      KAFKA_BROKER_ID: 1
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_CREATE_TOPICS: "stream-in:2:1,stream-out:2:1"
+
+#      KAFKA_ADVERTISED_HOST_NAME: 192.168.1.6
+#      KAFKA_CREATE_TOPICS: "test:1:1"
+#      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
 #    volumes:
 #    - /var/run/docker.sock:/var/run/docker.sock
 
 
+volumes:
+  data:
 
 
 

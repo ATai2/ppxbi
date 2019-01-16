@@ -20,7 +20,7 @@ public class MyShiroRealm extends AuthorizingRealm {
     private ILoginService loginService;
 
     /**
-     * //角色权限和对应权限添加
+     * 角色权限和对应权限添加
      *
      * @param principalCollection
      * @return
