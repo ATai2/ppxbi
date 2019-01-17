@@ -61,59 +61,52 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_ROOT_HOST: '%'
     restart: always
-
-  redis:
-    image: redis
-    restart: always
-    ports:
-    - 6379:6379
-    command: redis-server --requirepass root  --notify-keyspace-events Egl
-
-
-  elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.5.4
-    container_name: elasticsearch
-    environment:
-    - discovery.type=single-node
-    #    volumes:
-    #    - ./esdata:/usr/share/elasticsearch/data
-#    networks:
-#    - efknet
-    ports:
-    - "9200:9200"
-
-  kibana:
-    image: docker.elastic.co/kibana/kibana-oss:6.5.4
-    container_name: kibana
-#    networks:
-#    - efknet
-    ports:
-    - "5601:5601"
-
-  zookeeper:
-    image: wurstmeister/zookeeper
-    ports:
-    - "2181:2181"
-  kafka:
-    image: wurstmeister/kafka
-    ports:
-    - "9092:9092"
-    depends_on:
-    - zookeeper
-    environment:
-      KAFKA_ADVERTISED_HOST_NAME: 192.168.1.6
-      KAFKA_ADVERTISED_PORT: 9092
-      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
-      KAFKA_BROKER_ID: 1
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-      KAFKA_CREATE_TOPICS: "stream-in:2:1,stream-out:2:1"
-
+#
+#  redis:
+#    image: redis
+#    restart: always
+#    ports:
+#    - 6379:6379
+#    command: redis-server --requirepass root  --notify-keyspace-events Egl
+#
+#
+#  elasticsearch:
+#    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.5.4
+#    container_name: elasticsearch
+#    environment:
+#    - discovery.type=single-node
+#    #    volumes:
+#    #    - ./esdata:/usr/share/elasticsearch/data
+##    networks:
+##    - efknet
+#    ports:
+#    - "9200:9200"
+#
+#  kibana:
+#    image: docker.elastic.co/kibana/kibana-oss:6.5.4
+#    container_name: kibana
+##    networks:
+##    - efknet
+#    ports:
+#    - "5601:5601"
+#
+#  zookeeper:
+#    image: wurstmeister/zookeeper
+#    ports:
+#    - "2181:2181"
+#  kafka:
+#    image: wurstmeister/kafka
+#    ports:
+#    - "9092:9092"
+#    depends_on:
+#    - zookeeper
+#    environment:
 #      KAFKA_ADVERTISED_HOST_NAME: 192.168.1.6
-#      KAFKA_CREATE_TOPICS: "test:1:1"
-#      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-#    volumes:
-#    - /var/run/docker.sock:/var/run/docker.sock
-
+#      KAFKA_ADVERTISED_PORT: 9092
+#      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
+#      KAFKA_BROKER_ID: 1
+#      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+#      KAFKA_CREATE_TOPICS: "stream-in:2:1,stream-out:2:1"
 
 volumes:
   data:
