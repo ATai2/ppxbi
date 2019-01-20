@@ -2,8 +2,13 @@ issues:
 * spark-shell下shift键有向上的功能，填充上一步的命令
 
 
+前端组件：
+[Element-ui](http://element-cn.eleme.io/#/zh-CN/component/layout)
+[vue-admin-ui](https://panjiachen.github.io/vue-element-admin-site/zh/guide/essentials/permission.html#指令权限)
 
 
+数据采集
+https://docs.scrapy.org/en/latest/intro/tutorial.html
 
 日志系统搭建
 
