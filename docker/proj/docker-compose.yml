@@ -1,11 +1,36 @@
 version: '3'
 services:
+  mysql:
+    restart: always
+    image: mysql:5.7
+    container_name: mysql
+    ports:
+    - 3306:3306
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: atdb
+      MYSQL_ROOT_HOST: '%'
+    command:
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+      --lower_case_table_names=1
+      --max_allowed_packet=128M
+      --sql-mode="STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO"
+
+
   eureka:
     restart: always
     image: atai2/ppx-eureka:v1
     container_name: eureka
+    volumes:
+    - ./logs:/logs/app
     ports:
     - 8761:8761
+    environment:
+      TZ: Asia/Shanghai
 
 #  admin:
 #    restart: always
@@ -49,18 +74,18 @@ services:
 #      - spring.datasource.url=jdbc:mysql://mysql:3306/atdb?charset=utf8mb4&useSSL=false
 
 
-  mysql:
-    image: mysql:5.7
-    container_name: mysql
-    ports:
-    - "3306:3306"
-    volumes:
-      - ./mysql:/var/lib/mysql
-    environment:
-      MYSQL_DATABASE: atdb
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_ROOT_HOST: '%'
-    restart: always
+#  mysql:
+#    image: mysql:5.7
+#    container_name: mysql
+#    ports:
+#    - "3306:3306"
+##    volumes:
+##      - ./mysql:/var/lib/mysql
+#    environment:
+#      MYSQL_DATABASE: atdb
+#      MYSQL_ROOT_PASSWORD: root
+#      MYSQL_ROOT_HOST: '%'
+#    restart: always
 #
 #  redis:
 #    image: redis
@@ -108,8 +133,8 @@ services:
 #      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 #      KAFKA_CREATE_TOPICS: "stream-in:2:1,stream-out:2:1"
 
-volumes:
-  data:
+#volumes:
+#  data:
 
 
 
