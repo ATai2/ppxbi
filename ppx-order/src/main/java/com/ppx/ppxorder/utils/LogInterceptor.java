@@ -84,7 +84,6 @@ public class LogInterceptor {
         return fileMap;
     }
 
-
     private String getController(JoinPoint joinPoint) {
         return new StringBuffer().append("Controller  : ").append(joinPoint.getTarget().getClass().getName()).append(".(")
                 .append(joinPoint.getTarget().getClass().getSimpleName()).append(".java:1)").toString();
