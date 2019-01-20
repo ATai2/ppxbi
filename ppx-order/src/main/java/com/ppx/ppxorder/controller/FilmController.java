@@ -18,13 +18,13 @@ import java.util.List;
 @Slf4j
 public class FilmController {
     @GetMapping("/films")
-    public List<FilmInfo> getFilms(@RequestParam Integer pageIndex,@RequestParam Integer pageSize){
-        List<FilmInfo> list=new ArrayList<>();
+    public List<FilmInfo> getFilms(@RequestParam Integer pageIndex, @RequestParam Integer pageSize) {
+        List<FilmInfo> list = new ArrayList<>();
         return list;
     }
 
     @GetMapping("/test")
-    public String getUser(){
+    public String getUser() {
         return "";
     }
 
