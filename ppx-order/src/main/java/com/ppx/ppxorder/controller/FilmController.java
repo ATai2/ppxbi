@@ -23,4 +23,9 @@ public class FilmController {
         return list;
     }
 
+    @GetMapping("/test")
+    public String getUser(){
+        return "";
+    }
+
 }
