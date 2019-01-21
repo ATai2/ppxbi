@@ -72,5 +72,5 @@
         <appender-ref ref="STDOUT" />
         <appender-ref ref="ERROR-OUT" />
         <appender-ref ref="INFO-OUT" />
-    </root>
+    </root>78
 </configuration>
