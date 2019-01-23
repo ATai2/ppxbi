@@ -21,16 +21,16 @@ services:
       --sql-mode="STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO"
 
 
-  eureka:
-    restart: always
-    image: atai2/ppx-eureka:v1
-    container_name: eureka
-    volumes:
-    - ./logs:/logs/app
-    ports:
-    - 8761:8761
-    environment:
-      TZ: Asia/Shanghai
+#  eureka:
+#    restart: always
+#    image: atai2/ppx-eureka:v1
+#    container_name: eureka
+#    volumes:
+#    - ./logs:/logs/app
+#    ports:
+#    - 8761:8761
+#    environment:
+#      TZ: Asia/Shanghai
 
 #  admin:
 #    restart: always
@@ -95,25 +95,43 @@ services:
 #    command: redis-server --requirepass root  --notify-keyspace-events Egl
 #
 #
-#  elasticsearch:
-#    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.5.4
-#    container_name: elasticsearch
-#    environment:
-#    - discovery.type=single-node
-#    #    volumes:
-#    #    - ./esdata:/usr/share/elasticsearch/data
-##    networks:
-##    - efknet
-#    ports:
-#    - "9200:9200"
-#
-#  kibana:
-#    image: docker.elastic.co/kibana/kibana-oss:6.5.4
-#    container_name: kibana
-##    networks:
-##    - efknet
-#    ports:
-#    - "5601:5601"
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.5.4
+    container_name: elasticsearch
+    environment:
+    - discovery.type=single-node
+    #    volumes:
+    #    - ./esdata:/usr/share/elasticsearch/data
+#    networks:
+#    - efknet
+    ports:
+    - "9200:9200"
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana-oss:6.5.4
+    container_name: kibana
+#    networks:
+#    - efknet
+    ports:
+    - "5601:5601"
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:6.5.4
+    command: logstash -f /etc/logstash/conf.d/logstash.conf
+    volumes:
+    - ./logstash/conf.d:/etc/logstash/conf.d
+#    - $PWD/log:/tmp
+    container_name: logstash551
+    hostname: logstash
+    restart: always
+    depends_on:
+    - elasticsearch
+    ports:
+    - "7001-7005:7001-7005"
+    - "4567:4567"
+
+
+
 #
 #  zookeeper:
 #    image: wurstmeister/zookeeper

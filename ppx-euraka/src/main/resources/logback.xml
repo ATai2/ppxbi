@@ -67,11 +67,47 @@
         </rollingPolicy>
     </appender>
 
+    <appender name="logstash" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--<destination>logstash:9250</destination>-->
+        <file>${LOG_FILE}.json</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_FILE}.json.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <timestamp>
+                    <timeZone>UTC</timeZone>
+                </timestamp>
+                <pattern>
+                    <pattern>
+                        {
+                        "severity":"%level",
+                        "service":"${springAppName:-}",
+                        "trace":"%X{X-B3-TraceId:-}",
+                        "span":"%X{X-B3-SpanId:-}",
+                        "exportable":"%X{X-Span-Export:-}",
+                        "pid":"${PID:-}",
+                        "thread":"%thread",
+                        "class":"%logger{40}",
+                        "rest":"%message"
+                        }
+                    </pattern>
+                </pattern>
+            </providers>
+        </encoder>
+
+    </appender>
+    <appender name="LOGSTASHSOCKET" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>logstash:4567</destination> //logstash ip和暴露的端口，我目前理解就是通过这个地址把日志发送过去
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder" />
+    </appender>
     <!-- 基于dubug处理日志：具体控制台或者文件对日志级别的处理还要看所在appender配置的filter，如果没有配置filter，则使用root配置 -->
     <root level="debug">
-        <appender-ref ref="STDOUT" />
-        <appender-ref ref="ERROR-OUT" />
-        <appender-ref ref="INFO-OUT" />
-
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ERROR-OUT"/>
+        <appender-ref ref="INFO-OUT"/>
+        <appender-ref ref="logstash"/>
+        <appender-ref ref="LOGSTASHSOCKET"/>
     </root>
 </configuration>
