@@ -1,21 +1,30 @@
 server:
-  port: 8081
+  port: 9100
+#  servlet:
+#    context-path:
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
 
 spring:
   application:
     name: ppx-activiti
+
   datasource:
-    url: jdbc:mysql://localhost:3306/act5?useSSL=true
+    url: jdbc:mysql://localhost:3306/atdb?useSSL=true
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
 
-  # activiti default configuration
-  activiti:
-    database-schema-update: true
-    check-process-definitions: true
-    process-definition-location-prefix: classpath:/processes/
-    #    process-definition-location-suffixes:
-    #      - **.bpmn
-    #      - **.bpmn20.xml
-    history-level: full
+#  # activiti default configuration
+#  activiti:
+#    database-schema-update: true
+#    check-process-definitions: true
+#    process-definition-location-prefix: classpath:/processes/
+#    #    process-definition-location-suffixes:
+#    #      - **.bpmn
+#    #      - **.bpmn20.xml
+#    history-level: full
+debug: true
