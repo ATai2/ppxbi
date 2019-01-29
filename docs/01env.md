@@ -16,6 +16,31 @@ https://docs.scrapy.org/en/latest/intro/tutorial.html
 
 
 ELK
+http://localhost:5601/app/kibana#/management/kibana/index
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 树莓派安装 Docker CE
 2018年08月16日 09:56:43 项大神 阅读数：451
