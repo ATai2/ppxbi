@@ -1,7 +1,7 @@
 server:
   port: 9100
 #  servlet:
-#    context-path:
+#    context-path: /processes
 
 eureka:
   client:
@@ -19,12 +19,12 @@ spring:
     password: root
 
 #  # activiti default configuration
-#  activiti:
-#    database-schema-update: true
-#    check-process-definitions: true
+  activiti:
+    database-schema-update: true
+    check-process-definitions: false
 #    process-definition-location-prefix: classpath:/processes/
-#    #    process-definition-location-suffixes:
-#    #      - **.bpmn
-#    #      - **.bpmn20.xml
-#    history-level: full
+    #    process-definition-location-suffixes:
+    #      - **.bpmn
+    #      - **.bpmn20.xml
+    history-level: full
 debug: true
