@@ -1,5 +1,7 @@
 server:
   port: 9100
+  servlet:
+    context-path: /ppxactivi
 #  servlet:
 #    context-path: /processes
 
