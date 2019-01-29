@@ -6,8 +6,13 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 
 @EnableEurekaClient
-//@ComponentScan("org.activiti.rest")
-@SpringBootApplication(exclude = {org.activiti.spring.boot.SecurityAutoConfiguration.class})
+@ComponentScan(basePackages = {"org.activiti.rest"})
+@SpringBootApplication(exclude = {org.activiti.spring.boot.SecurityAutoConfiguration.class,
+//org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.class,
+//org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration.class,
+//org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration.class,
+//org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration.class
+})
 public class PpxActivitiApplication {
 
     public static void main(String[] args) {

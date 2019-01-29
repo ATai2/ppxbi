@@ -102,7 +102,7 @@
         <destination>localhost:4567</destination> //logstash ip和暴露的端口，我目前理解就是通过这个地址把日志发送过去
         <!--<destination>logstash:4567</destination> //logstash ip和暴露的端口，我目前理解就是通过这个地址把日志发送过去-->
         <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder" >
-            <customFields>{"appname":"ppx_usermgt"}</customFields>
+            <customFields>{"appname":"ppx_activiti"}</customFields>
         </encoder>
     </appender>
     <!-- 基于dubug处理日志：具体控制台或者文件对日志级别的处理还要看所在appender配置的filter，如果没有配置filter，则使用root配置 -->
