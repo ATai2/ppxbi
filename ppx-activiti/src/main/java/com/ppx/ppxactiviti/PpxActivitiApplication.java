@@ -2,21 +2,8 @@ package com.ppx.ppxactiviti;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration;
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.context.annotation.ComponentScan;
 
-@EnableEurekaClient
-//@ComponentScan(basePackages = {"org.activiti.rest"})
-@SpringBootApplication(exclude = {org.activiti.spring.boot.SecurityAutoConfiguration.class,
-        LiquibaseAutoConfiguration.class,
-        HibernateJpaAutoConfiguration.class,
-org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.class,
-org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration.class,
-org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration.class,
-org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration.class
-})
+@SpringBootApplication
 public class PpxActivitiApplication {
 
     public static void main(String[] args) {
@@ -24,4 +11,3 @@ public class PpxActivitiApplication {
     }
 
 }
-
