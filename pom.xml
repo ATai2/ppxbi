@@ -13,7 +13,6 @@
         <module>ppx-config</module>
         <module>ppx-gateway</module>
         <module>ppx-admin</module>
-        <module>ppx-activiti</module>
         <module>ppx-usermgt</module>
         <module>ppx-order</module>
         <module>ppx-util</module>
