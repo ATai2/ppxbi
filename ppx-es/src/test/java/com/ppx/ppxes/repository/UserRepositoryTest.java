@@ -17,7 +17,6 @@ public class UserRepositoryTest extends PpxEsApplicationTests {
     public void testFindOne(){
         Optional<User> user = userRepository.findById(1L);
         assertEquals("a",user.get().getName());
-
     }
 
 }
