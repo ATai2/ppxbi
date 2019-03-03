@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    sh
+    driver-class-name: org.h2.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+#    username: root
+#    password: root
+    url: jdbc:h2:mem:test
+    schema: classpath:db/shema.sql
+    data: classpath:db/data.sql
+  jpa:
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update

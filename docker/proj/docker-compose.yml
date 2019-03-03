@@ -32,6 +32,15 @@ services:
     environment:
       TZ: Asia/Shanghai
 
+
+  flowable:
+    image: flowable/flowable-rest
+    container_name: flowableapp
+    ports:
+    - 9090:8080
+    environment:
+      TZ: Asia/Shanghai
+
 #  admin:
 #    restart: always
 #    image: atai/ppx-admin:v1
