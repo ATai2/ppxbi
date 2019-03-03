@@ -35,9 +35,9 @@ spring:
     hibernate:
       ddl-auto: update
 
-#security:
-#  basic:
-#    enabled: false
+security:
+  basic:
+    enabled: false
 
 #  jpa:
 #    data
