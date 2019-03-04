@@ -1,6 +1,5 @@
-package com.ppx.ppxes.controller;
+package com.ppx.ppxes.web.controller;
 
-import com.ppx.ppxes.base.ApiResponse;
 import com.ppx.ppxes.base.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
