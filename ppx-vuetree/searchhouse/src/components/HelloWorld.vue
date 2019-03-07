@@ -1,26 +1,26 @@
 <template>
-    <div class="hello">
-        <h1>{{ msg }}</h1>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
 
-        <el-tree
-                :data="data2"
-                show-checkbox
-                default-expand-all
-                node-key="id"
-                ref="tree"
-                highlight-current
-                :props="defaultProps">
-        </el-tree>
+    <el-tree
+            :data="data2"
+            show-checkbox
+            default-expand-all
+            node-key="id"
+            ref="tree"
+            highlight-current
+            :props="defaultProps">
+    </el-tree>
 
 
-        <div class="buttons">
-            <el-button @click="getCheckedNodes">通过 node 获取</el-button>
-            <el-button @click="getCheckedKeys">通过 key 获取</el-button>
-            <el-button @click="setCheckedNodes">通过 node 设置</el-button>
-            <el-button @click="setCheckedKeys">通过 key 设置</el-button>
-            <el-button @click="resetChecked">清空</el-button>
-        </div>
+    <div class="buttons">
+      <el-button @click="getCheckedNodes">通过 node 获取</el-button>
+      <el-button @click="getCheckedKeys">通过 key 获取</el-button>
+      <el-button @click="setCheckedNodes">通过 node 设置</el-button>
+      <el-button @click="setCheckedKeys">通过 key 设置</el-button>
+      <el-button @click="resetChecked">清空</el-button>
     </div>
+  </div>
 </template>
 
 <script>
@@ -101,21 +101,21 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    h3 {
-        margin: 40px 0 0;
-    }
+  h3 {
+    margin: 40px 0 0;
+  }
 
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-    li {
-        display: inline-block;
-        margin: 0 10px;
-    }
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 
-    a {
-        color: #42b983;
-    }
+  a {
+    color: #42b983;
+  }
 </style>
