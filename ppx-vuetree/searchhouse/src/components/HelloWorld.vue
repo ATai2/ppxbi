@@ -29,6 +29,24 @@
         props: {
             msg: String,
         },
+        mounted(){
+
+            var jsonObj = this.$x2js.xml2js('<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" ' +
+                'xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">' +
+                '<soap:Body><ns1:getSDLengthByJMLXResponse xmlns:ns1="http://server.Gw">' +
+                '<ns1:out>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;NODES&gt;&lt;NODE&gt;&lt;NAME&gt;方沟&lt;/NAME&gt;&lt;VALUE&gt;' +
+                '337.9432807&lt;/VALUE&gt;&lt;/NODE&gt;&lt;NODE&gt;&lt;NAME&gt;砖混&lt;/NAME&gt;&lt;VALUE&gt;66.8424335&lt;/VALUE&gt;&lt;' +
+                '/NODE&gt;&lt;NODE&gt;&lt;NAME&gt;盾构&lt;/NAME&gt;&lt;VALUE&gt;14.8955979&lt;/VALUE&gt;&lt;/NODE&gt;&lt;NODE&gt;&lt;' +
+                'NAME&gt;暗挖&lt;/NAME&gt;&lt;VALUE&gt;48.1186321&lt;/VALUE&gt;&lt;/NODE&gt;&lt;NODE&gt;&lt;NAME&gt;顶管&lt;/NAME&gt;&lt;' +
+                'VALUE&gt;2.9357091&lt;/VALUE&gt;&lt;/NODE&gt;&lt;NODE&gt;&lt;NAME&gt;总长度&lt;/NAME&gt;&lt;VALUE&gt;1272.8081174&lt;/VALUE&gt;' +
+                '&lt;/NODE&gt;&lt;NODE&gt;&lt;NAME&gt;检查井总数&lt;/NAME&gt;&lt;VALUE&gt;94885&lt;/VALUE&gt;&lt;/NODE&gt;&lt;/NODES&gt;' +
+                '</ns1:out></ns1:getSDLengthByJMLXResponse></soap:Body></soap:Envelope>')
+            var newjsonObj = this.$x2js.xml2js(jsonObj.Envelope.Body.getSDLengthByJMLXResponse.out.__text)
+            for(var i = 0;i<newjsonObj.NODES.NODE.length;i++){
+                console.log(newjsonObj.NODES.NODE[i].NAME)
+                console.log(newjsonObj.NODES.NODE[i].VALUE)
+            }
+        },
         methods: {
             getCheckedNodes() {
                 console.log(this.$refs.tree.getCheckedNodes());
