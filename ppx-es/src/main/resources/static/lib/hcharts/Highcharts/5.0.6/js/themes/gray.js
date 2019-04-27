@@ -311,7 +311,7 @@
                 trackBorderColor: '#666'
             },
 
-            // special colors for some of the demo examples
+            // special colors for some of the com.ppx.demo examples
             legendBackgroundColor: 'rgba(48, 48, 48, 0.8)',
             background2: 'rgb(70, 70, 70)',
             dataLabelsColor: '#444',

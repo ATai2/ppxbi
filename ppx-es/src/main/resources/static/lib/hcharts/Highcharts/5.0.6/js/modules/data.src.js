@@ -478,7 +478,7 @@
                 // If strings are intermixed with numbers or dates in a parsed column, it is an indication
                 // that parsing went wrong or the data was not intended to display as numbers or dates and 
                 // parsing is too aggressive. Fall back to categories. Demonstrated in the 
-                // highcharts/demo/column-drilldown sample.
+                // highcharts/com.ppx.demo/column-drilldown sample.
                 if (isXColumn && column.mixed) {
                     columns[col] = rawColumns[col];
                 }

@@ -54,7 +54,7 @@ npm run build --report
 
 ## Demo
 
-![demo](https://github.com/PanJiaChen/PanJiaChen.github.io/blob/master/images/demo.gif)
+![com.ppx.demo](https://github.com/PanJiaChen/PanJiaChen.github.io/blob/master/images/com.ppx.demo.gif)
 
 ### Element-Ui 使用 cdn 教程
 
@@ -75,7 +75,7 @@ externals: {
 
 最终你可以使用 `npm run build --report` 查看效果
 如图：
-![demo](https://panjiachen.github.io/images/element-cdn.png)
+![com.ppx.demo](https://panjiachen.github.io/images/element-cdn.png)
 
 **[具体代码](https://github.com/PanJiaChen/vue-admin-template/commit/746aff560932704ae821f82f10b8b2a9681d5177)**
 

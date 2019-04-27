@@ -2,7 +2,7 @@
 
 > A minimal vue admin template with Element UI & axios & iconfont & permission control & lint
 
-**Live demo:** http://panjiachen.github.io/vue-admin-template
+**Live com.ppx.demo:** http://panjiachen.github.io/vue-admin-template
 
 [中文文档](https://github.com/PanJiaChen/vue-admin-template/blob/master/README-zh.md)
 
@@ -27,7 +27,7 @@ npm run build --report
 
 ## Demo
 
-![demo](https://github.com/PanJiaChen/PanJiaChen.github.io/blob/master/images/demo.gif)
+![com.ppx.demo](https://github.com/PanJiaChen/PanJiaChen.github.io/blob/master/images/com.ppx.demo.gif)
 
 ## Extra
 
@@ -67,7 +67,7 @@ Finally there is a small detail to pay attention to that if you import vue in gl
 And you can use `npm run build --report` to see the effect
 
 Pictured:
-![demo](https://panjiachen.github.io/images/element-cdn.png)
+![com.ppx.demo](https://panjiachen.github.io/images/element-cdn.png)
 
 **[Detailed code](https://github.com/PanJiaChen/vue-admin-template/commit/746aff560932704ae821f82f10b8b2a9681d5177)**
 
