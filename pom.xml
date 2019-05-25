@@ -14,7 +14,6 @@
         <module>ppx-gateway</module>
         <module>ppx-admin</module>
         <module>ppx-usermgt</module>
-        <module>ppx-order</module>
         <module>ppx-util</module>
         <module>ppx-shiro</module>
     </modules>
@@ -32,7 +31,6 @@
 
     <properties>
         <activiti.version>6.0.0</activiti.version>
-
         <dockerfile-maven-version>1.4.9</dockerfile-maven-version>
         <docker.image.prefix>atai</docker.image.prefix>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -161,4 +161,22 @@ public class LeetcodeTest {
         }
         return res;
     }
+
+    @Test
+    public void testRemoveDup(){
+        int[] n=new int[]{1,1,2};
+        removeDuplicates(n);
+    }
+    public int removeDuplicates(int[] nums) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(nums[i])) {
+                map.put(nums[i], i);
+            }
+        }
+//        nums =(int[]) map.keySet().toArray();
+        return map.size();
+
+
+    }
 }
