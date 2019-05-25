@@ -16,6 +16,7 @@
         <module>ppx-usermgt</module>
         <module>ppx-util</module>
         <module>ppx-shiro</module>
+        <module>ppx-shiro-mybatis</module>
     </modules>
     <packaging>pom</packaging>
 
