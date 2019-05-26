@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 @EnableAspectJAutoProxy
@@ -47,6 +48,12 @@ public class ShiroConfiguration {
         ShiroFilterFactoryBean shiroFilterFactoryBean=new ShiroFilterFactoryBean();
 
 
+        Map<String,String> filterMap=new LinkedHashMap<>();
+        filterMap.put("/add", "authc");
+        filterMap.put("/update", "authc");
+
+        shiroFilterFactoryBean.setLoginUrl("/login");
+        shiroFilterFactoryBean.setFilterChainDefinitionMap(filterMap);
 
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         return shiroFilterFactoryBean;
