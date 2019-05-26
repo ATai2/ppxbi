@@ -2,6 +2,8 @@ package com.ppx.ppxshiro.controller;
 
 
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
@@ -9,10 +11,7 @@ import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -41,23 +40,43 @@ public class LoginController {
     }
 
     //退出的时候是get请求，主要是用于退出
-    @RequestMapping(value = "/login",method = RequestMethod.GET)
+    @RequestMapping(value = "/tologin",method = RequestMethod.GET)
     public String login(){
         return "login";
     }
 
-    //post登录
-    @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String login(@RequestBody Map map){
-        //添加用户认证信息
-        Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(
-                map.get("username").toString(),
-                map.get("password").toString());
-        //进行验证，这里可以捕获异常，然后返回对应信息
-        subject.login(usernamePasswordToken);
-        return "login";
+    @RequestMapping("/login")
+    public String loginPost(String name,String password,Model model) {
+
+        Subject subject=SecurityUtils.getSubject();
+        UsernamePasswordToken token = new UsernamePasswordToken(name, password);
+        try {
+            subject.login(token);
+            return "add";
+        } catch (UnknownAccountException e) {
+            model.addAttribute("msg", "UnknownAccount");
+            return "redirect:/hello";
+        } catch (IncorrectCredentialsException e) {
+            model.addAttribute("msg", "Incorrect credential");
+            return "redirect:/hello";
+
+        }finally {
+            return "test";
+
+        }
     }
+//    //post登录
+//    @RequestMapping(value = "/login",method = RequestMethod.POST)
+//    public String login(@RequestBody Map map){
+//        //添加用户认证信息
+//        Subject subject = SecurityUtils.getSubject();
+//        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(
+//                map.get("username").toString(),
+//                map.get("password").toString());
+//        //进行验证，这里可以捕获异常，然后返回对应信息
+//        subject.login(usernamePasswordToken);
+//        return "login";
+//    }
 
     @RequestMapping(value = "/index")
     public String index(){

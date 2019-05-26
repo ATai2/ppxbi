@@ -1,6 +1,7 @@
 
 server:
   port: 8082
+
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -28,3 +29,4 @@ spring:
 #    auto=true
 #logging:
 #  level: debug
+debug: true
