@@ -7,11 +7,15 @@ import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@EnableAspectJAutoProxy
+@ComponentScan("com.ppx.ppxshiro")
 @Configuration
 public class ShiroConfiguration {
 

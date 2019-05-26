@@ -7,6 +7,7 @@ import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
-@RestController
+@Controller
 public class LoginController {
 //    @Autowired
 //    private ILoginService loginService;
@@ -30,13 +31,13 @@ public class LoginController {
     public String add(Model model){
         model.addAttribute("name", "atai");
 
-        return "/user/add";
+        return "user/add";
     }
     @RequestMapping("/update")
     public String update(Model model){
         model.addAttribute("name", "atai");
 
-        return "/user/update";
+        return "user/update";
     }
 
     //退出的时候是get请求，主要是用于退出
