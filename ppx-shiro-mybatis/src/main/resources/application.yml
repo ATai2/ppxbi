@@ -9,7 +9,7 @@ spring:
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
-#   数据源其他配置，需要额外配置
+    #   数据源其他配置，需要额外配置
     initialSize: 5
     minIdle: 5
     maxActive: 20
@@ -21,7 +21,7 @@ spring:
     testOnBorrow: false
     testOnReturn: false
     poolPreparedStatements: true
-#   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
     filters: stat,wall
     maxPoolPreparedStatementPerConnectionSize: 20
     useGlobalDataSourceStat: true
