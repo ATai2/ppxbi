@@ -43,6 +43,7 @@
         <java.version>1.8</java.version>
         <guns.version>1.0.0</guns.version>
         <mybatisplus-spring-boot-starter.version>1.0.5</mybatisplus-spring-boot-starter.version>
+        <mybatis-spring-boot-starter.version>2.0.0</mybatis-spring-boot-starter.version>
         <shiro.version>1.4.0</shiro.version>
         <mybatis-plus.version>2.3</mybatis-plus.version>
         <fastjson.version>1.2.47</fastjson.version>
@@ -88,7 +89,7 @@
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatisplus-spring-boot-starter.version}</version>
+                <version>${mybatis-spring-boot-starter.version}</version>
             </dependency>
             <!--shiro依赖-->
             <dependency>

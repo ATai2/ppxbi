@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ppx.ppxshiro.mapper">
+    <!--<resultMap type="User" id="User">-->
+        <!--<id property="infoId" javaType="int" column="info_id" />-->
+        <!--<result javaType="java.lang.String" property="nickName" column="nickname" />-->
+    <!--</resultMap>-->
+
+    <!-- 单表查询info数据 -->
+    <select id="findByName" resultMap="User"
+            parameterType="string">
+        select * from user where name=#{value}
+    </select>
+
+    <!--&lt;!&ndash; 多表1对1关系查询数据 &ndash;&gt;-->
+    <!--<select id="findInfoAndUserById" resultMap="UserInfoWithUser"-->
+            <!--parameterType="int">-->
+        <!--select * from userinfo where info_id=#{id}-->
+    <!--</select>-->
+</mapper>

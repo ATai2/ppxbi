@@ -25,6 +25,9 @@ spring:
 
 #    prefix: classpath:/views/ #调整页面路径
 
+mybatis:
+  type-aliases-package:com.ppx.ppxshiro.domain
+
 #  aop:
 #    auto=true
 #logging:
