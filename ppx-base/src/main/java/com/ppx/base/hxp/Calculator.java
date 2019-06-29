@@ -1,16 +1,20 @@
 package com.ppx.base.hxp;
 
+import scala.Int;
+
 /**
  * @author Administrator
  */
 public class Calculator {
     public static void main(String[] args) {
-        String expression = "3+2*6-2";
+        String expression = "30+2*6-2";
         ArrayStack2 numStack = new ArrayStack2(10);
         ArrayStack2 operStack = new ArrayStack2(10);
         int index = 0;
         int num1 = 0, num2 = 0, oper = 0, res = 0;
         char ch = ' ';
+//        store multi slot nums
+        String keepNum = "";
 
         while (true) {
             ch = expression.substring(index, index + 1).charAt(0);
@@ -33,7 +37,15 @@ public class Calculator {
                     operStack.push(ch);
                 }
             } else {
-                numStack.push(ch - 48);
+                keepNum += ch;
+                if (index == expression.length() - 1) {
+                    numStack.push(Integer.parseInt(ch + ""));
+
+                } else if (operStack.isOper(expression.substring(index + 1, index + 2).charAt(0))) {
+                    numStack.push(Integer.parseInt(keepNum));
+                    keepNum = "";
+                }
+//                numStack.push(ch - 48);
             }
             index++;
             if (index >= expression.length()) {
