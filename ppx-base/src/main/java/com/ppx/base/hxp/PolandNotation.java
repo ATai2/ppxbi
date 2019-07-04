@@ -1,6 +1,7 @@
 package com.ppx.base.hxp;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
@@ -17,10 +18,7 @@ public class PolandNotation {
     public static List<String> getListString(String suffuxExpression) {
         String[] split = suffuxExpression.split(" ");
         List<String> list = new ArrayList<>();
-        for (String ele :
-                split) {
-            list.add(ele);
-        }
+        Collections.addAll(list, split);
         return list;
     }
 
