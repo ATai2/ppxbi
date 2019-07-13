@@ -1,6 +1,6 @@
 package com.ppx.base.hxp;
 
-import scala.Int;
+
 
 /**
  * @author Administrator
