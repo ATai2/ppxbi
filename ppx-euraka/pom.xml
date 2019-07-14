@@ -22,6 +22,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+
+        <docker.repostory>hub.docker.com</docker.repostory>
+        <docker.registry.name>atai2</docker.registry.name>
     </properties>
 
     <dependencies>
@@ -71,10 +74,22 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.1.1</version>
                 <configuration>
+
                     <baseImage>openjdk:8-jre-alpine</baseImage>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-                    <exposes>8761</exposes>
-                    <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+                    <dockerDirectory>${basedir}/docker</dockerDirectory>
+                    <!--                    <exposes>8761</exposes>-->
+<!--                    <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/${project.build.finalName}.jar"]</entryPoint>-->
+
+                    <forceTags>true</forceTags>
+                    <imageName>
+                        ${docker.registry.name}/${project.artifactId}:${project.version}
+                    </imageName>
+                    <imageTags>
+                        <!--docker的tag为项目版本号、latest-->
+                        <imageTag>${project.version}</imageTag>
+<!--                        <imageTag>latest</imageTag>-->
+                    </imageTags>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
