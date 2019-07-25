@@ -100,6 +100,42 @@ public class BubbleSort {
     }
 
 
+    static void quikSort(int[] arr, int left, int right) {
+//        left index
+        int l=left;
+//        right index
+        int r=right;
+        int pivot = arr[(left + right) / 2];
+        int temp=0;
+        while (l < r) {
+            while (arr[l] < pivot) {
+                l += 1;
+            }
+            while (arr[r] > pivot) {
+                r-=1;
+            }
+            if (l >= r) {
+                break;
+            } else {
+                temp = arr[l];
+                arr[l] = arr[r];
+                arr[r] = temp;
+            }
+            if (arr[l] == pivot) {
+                r-=1;
+            }
+            if (arr[r] == pivot) {
+                l+=1;
+            }
+        }
+
+        if (left < r) {
+            quikSort(arr,left,r);
+        }
+        if (right > l) {
+            quikSort(arr,l,right);
+        }
+    }
 
 
 
