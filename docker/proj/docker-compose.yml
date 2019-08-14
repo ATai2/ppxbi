@@ -166,20 +166,6 @@ services:
 #  data:
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #  mysql:
 #    restart: always
 #    image: mysql:5.7
