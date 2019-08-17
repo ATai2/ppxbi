@@ -1,5 +1,7 @@
 package com.ppx.base.hxp;
 
+import java.util.Stack;
+
 public class SingleLinkedListDemo {
 
     public static void main(String[] args) {
@@ -21,8 +23,56 @@ public class SingleLinkedListDemo {
 
     static class SingleLinkedList {
 
-        private HeroNode head = new HeroNode(0, "", "");
+        public HeroNode head = new HeroNode(0, "", "");
 
+        public void reverseRecurse(HeroNode src, SingleLinkedList dest) {
+            if (src != null) {
+                reverseRecurse(src.next, dest);
+                src.next = null;
+//                if (src != head) {
+                    dest.add(src);
+//                }
+            }
+        }
+
+        //        public void reverseRecurse(HeroNode src,SingleLinkedList dest){
+//            if (src != null) {
+//                reverseRecurse(src.next, dest);
+//                dest.add(src);
+//            }
+//            int i=0;
+//        }
+        public void reveseStack() {
+            System.out.println();
+            Stack<HeroNode> stack = new Stack<>();
+            HeroNode temp = head;
+            while (temp.next != null) {
+                stack.push(temp.next);
+                temp = temp.next;
+            }
+            temp = head;
+            while (stack.size() > 0) {
+                temp.next = stack.pop();
+                temp = temp.next;
+            }
+            temp.next = null;
+        }
+
+        public void reverseLink(HeroNode head){
+            if (head.next == null ||head.next.next==null) {
+                return;
+            }
+            HeroNode cur=head.next;
+            HeroNode temp;
+            HeroNode reverseHead=new HeroNode(0,"","");
+            while (cur != null) {
+                temp=cur.next;
+                cur.next=reverseHead.next;
+                reverseHead.next=cur;
+                cur= temp;
+            }
+            head.next=reverseHead.next;
+        }
         // add item to the list
         //if not consider order
         public void add(HeroNode heroNode) {
@@ -32,36 +82,37 @@ public class SingleLinkedListDemo {
             }
             temp.next = heroNode;
         }
-//      add
+
+        //      add
         public void addByOrder(HeroNode heroNode) {
-            HeroNode temp=head;
-            boolean flag=false;
+            HeroNode temp = head;
+            boolean flag = false;
             while (temp.next != null) {
                 if (temp.next.no > heroNode.no) {
                     break;
                 } else if (temp.next.no == heroNode.no) {
-                    flag=true;
+                    flag = true;
                     break;
                 }
-                temp=temp.next;
+                temp = temp.next;
             }
             if (flag) {
                 System.out.println(" hero to insert exist, can not add");
-            }else {
-                heroNode.next=temp.next;
-                temp.next=heroNode;
+            } else {
+                heroNode.next = temp.next;
+                temp.next = heroNode;
             }
         }
 
-        public void delete(int no){
-            HeroNode temp=head;
-            boolean flag=false;
+        public void delete(int no) {
+            HeroNode temp = head;
+            boolean flag = false;
             while (temp.next != null) {
                 if (temp.next.no == no) {
-                    flag=true;
+                    flag = true;
                     break;
                 }
-                temp=temp.next;
+                temp = temp.next;
             }
             if (flag) {
                 temp.next = temp.next.next;
@@ -70,38 +121,39 @@ public class SingleLinkedListDemo {
             }
         }
 
-//
-        public void update(HeroNode heroNode){
+        //
+        public void update(HeroNode heroNode) {
             if (head.next == null) {
                 return;
             }
-            HeroNode temp=head.next;
-            boolean flag=false;
+            HeroNode temp = head.next;
+            boolean flag = false;
             while (temp.next != null) {
                 if (temp.no == heroNode.no) {
-                    flag=true;
+                    flag = true;
                     break;
                 }
-                temp=temp.next;
+                temp = temp.next;
             }
             if (flag) {
-                temp.name=heroNode.name;
-                temp.nickName=heroNode.nickName;
+                temp.name = heroNode.name;
+                temp.nickName = heroNode.nickName;
             }
         }
 
-        public int getLength(HeroNode head){
+        public int getLength(HeroNode head) {
             if (head.next == null) {
                 return 0;
             }
-            int length=0;
+            int length = 0;
             HeroNode node = head.next;
             while (node != null) {
                 length++;
-                node=node.next;
+                node = node.next;
             }
             return length;
         }
+
         public void list() {
             if (head.next == null) {
                 return;
