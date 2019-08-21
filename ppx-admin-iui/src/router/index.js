@@ -35,7 +35,8 @@ export const constantRouterMap = [
       path: 'dashboard',
       component: () => import('@/views/dashboard/index')
     }]
-  },  {
+  },  
+  {
     path: '/user',
     component: Layout,
     redirect: '/user',
@@ -64,7 +65,14 @@ export const constantRouterMap = [
         path: 'tree',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
+        meta: { title: 'Tree', icon: 'tree' }      
+      }
+      ,
+      {
+        path: 'eureka',
+        name: 'eureka',
+        component: () => import('@/views/eureka/index'),
+        meta: { title: 'eureka', icon: 'tree' }
       }
     ]
   },

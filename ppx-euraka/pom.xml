@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ppx</groupId>
-    <artifactId>ppx-euraka</artifactId>
+    <artifactId>ppx-eureka</artifactId>
     <version>v1</version>
     <packaging>jar</packaging>
 
-    <name>ppx-euraka</name>
+    <name>ppx-eureka</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
