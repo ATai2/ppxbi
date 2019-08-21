@@ -7,8 +7,6 @@
     <artifactId>bipro</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>scalademo</module>
-        <module>ppx-base</module>
         <module>ppx-euraka</module>
         <module>ppx-config</module>
         <module>ppx-gateway</module>
