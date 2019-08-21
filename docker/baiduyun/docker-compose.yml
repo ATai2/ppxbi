@@ -16,6 +16,7 @@ services:
     environment:
       TZ: Asia/Shanghai
       MYSQL_ROOT_PASSWORD: root
+
       MYSQL_DATABASE: atdb
       MYSQL_ROOT_HOST: '%'
     command:

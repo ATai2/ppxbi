@@ -19,7 +19,6 @@ public class PpxUser {
     @Column(length = 32, nullable = false)
     private String userName;
     @Column(length = 32,nullable = false)
-    @JsonIgnore
     private String pwd;
     private String role;
 
