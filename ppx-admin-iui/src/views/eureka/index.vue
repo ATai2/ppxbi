@@ -11,13 +11,15 @@
 </template>
 
 <script>
+import  globalParam  from '@/utils/const'
 export default {
   data() {
     return {
-      src: "http://localhost:8761/"
+      src: globalParam.baseUrl+":8761/"
     };
   },
   mounted() {
+    console.log(this.src)
     // 这里就拿到了iframe的对象
     console.log(this.$refs.iframe);
     // 这里就拿到了iframe的window对象

@@ -89,6 +89,18 @@ export const constantRouterMap = [
       }
     ]
   },
+  {
+    path: '/usermgt',
+    component: Layout,
+    children: [
+      {
+        path: 'usermgt',
+        name: 'usermgt',
+        component: () => import('@/views/usermgt/index'),
+        meta: { title: 'usermgt', icon: 'usermgt' }
+      }
+    ]
+  },
 
   {
     path: '/nested',
