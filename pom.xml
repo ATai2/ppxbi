@@ -15,6 +15,8 @@
         <module>ppx-util</module>
         <module>ppx-shiro</module>
         <module>ppx-shiro-mybatis</module>
+        <module>member</module>
+        <module>ppx-member</module>
     </modules>
     <packaging>pom</packaging>
 
