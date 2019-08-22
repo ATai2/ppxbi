@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://106.13.66.5:8761/eureka/
 
 spring:
   application:
@@ -17,7 +17,7 @@ spring:
       minimum-idle: 5
     username: root
     password: root
-    url: jdbc:mysql://localhost:3306/atdb?charset=utf8mb4&useSSL=false
+    url: jdbc:mysql://106.13.66.5:3306/atdb?charset=utf8mb4&useSSL=false
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
