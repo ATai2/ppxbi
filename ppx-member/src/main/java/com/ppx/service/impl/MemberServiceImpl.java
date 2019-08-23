@@ -14,6 +14,8 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.PostConstruct;
+
 //import com.ppx.api.mq.RegisterMailboxProducer;
 
 @RestController
@@ -26,6 +28,10 @@ public class MemberServiceImpl extends BaseApiService implements MemberService {
     @Autowired
     private RegisterMailboxProducer registerMailboxProducer;
 
+    @PostConstruct
+    void sendong(){
+        sendMsg(emailJson("l1111111"));
+    }
     @Override
     public ResponseBase findUserById(Long userId) {
 

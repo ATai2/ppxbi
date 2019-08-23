@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.ppx.ppxshiro.dao")
+@MapperScan("com.ppx.dao")
 public class PpxMemberApplication {
 
     public static void main(String[] args) {
