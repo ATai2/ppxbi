@@ -14,4 +14,10 @@ public class BaseApiService {
         responseBase.setData(data);
         return responseBase;
     }
+    public ResponseBase setResultSuccess(String msg) {
+        ResponseBase responseBase = new ResponseBase();
+        responseBase.setCode(RESPONSE.SUCCESS);
+        responseBase.setMessage(msg);
+        return responseBase;
+    }
 }

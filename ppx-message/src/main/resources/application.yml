@@ -1,0 +1,30 @@
+server:
+  port: 9000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://106.13.66.5:8761/eureka/
+
+spring:
+  application:
+    name: ppx-message
+
+  activemq:
+    pool:
+      enabled: true
+    password: admin
+    user: admin
+    broker-url: tcp://106.13.66.5:61616
+    in-memory: true
+
+#  mail:
+#    host:smtp163.com
+#    username:wangtaihe567@163.com
+#    password:1114677814
+#    enable:true
+#    smtp:
+#      auth:true
+#    starttls:
+#      enable:true
+#      requied:true

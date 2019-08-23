@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface MemberDao {
-    @Select("select id,username,password,phone,email,created,updated from mb_user")
+    @Select("select id,username,password,phone,email,created,updated from mb_user where id=#{userId}")
     UserEntity findByID(@Param("userId") Long userId);
 
     @Insert("insert into mb_user (username,password,phone,email,created,updated) values(#{username},#{password},#{phone},#{email},#{created},#{updated})")

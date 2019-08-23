@@ -1,7 +1,16 @@
 server:
   port: 9000
 
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://106.13.66.5:8761/eureka/
+
 spring:
+  application:
+    name: ppx-member
+
   thymeleaf:
     cache: false
   datasource:
@@ -28,4 +37,6 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
 mybatis:
   type-aliases-package: com.ppx.ppxshiro.domain
+
+MESSAGEQUEE: message_queue
 

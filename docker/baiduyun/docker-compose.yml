@@ -40,6 +40,14 @@ services:
     environment:
       TZ: Asia/Shanghai
 
+  activemq:
+    restart: always
+    image: webcenter/activemq
+    container_name: myactivemq
+    ports:
+      - 61617:61616
+      - 8162:8161
+
 
 #  flowable:
 #    image: flowable/flowable-rest

@@ -1,52 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.ppx</groupId>
-    <artifactId>ppx-usermgt</artifactId>
-    <version>v1</version>
-    <packaging>jar</packaging>
-
     <parent>
         <artifactId>bipro</artifactId>
         <groupId>com.ppx</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <name>ppx-usermgt</name>
-    <description>Demo project for Spring Boot</description>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ppx-message</artifactId>
+    <version>v1</version>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.59</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-activemq</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>net.logstash.logback</groupId>
-            <artifactId>logstash-logback-encoder</artifactId>
-            <version>5.1</version>
+            <groupId>com.ppx</groupId>
+            <artifactId>member</artifactId>
+            <version>v1</version>
         </dependency>
 
         <dependency>
@@ -57,8 +42,11 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-eureka-client</artifactId>
+        </dependency>
     </dependencies>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -81,31 +69,10 @@
             </snapshots>
         </repository>
     </repositories>
+
+
     <build>
         <plugins>
-            <!--使用docker插件需开启docker端口-->
-            <!--            <plugin>-->
-            <!--                <groupId>com.spotify</groupId>-->
-            <!--                <artifactId>dockerfile-maven-plugin</artifactId>-->
-            <!--                <version>${dockerfile-maven-version}</version>-->
-            <!--                <executions>-->
-            <!--                    <execution>-->
-            <!--                        <id>default</id>-->
-            <!--                        <goals>-->
-            <!--                            <goal>build</goal>-->
-            <!--                            &lt;!&ndash;<goal>push</goal>&ndash;&gt;-->
-            <!--                        </goals>-->
-            <!--                    </execution>-->
-            <!--                </executions>-->
-            <!--                <configuration>-->
-            <!--                    <repository>atai/ppx-usermgt</repository>-->
-            <!--                    <tag>${project.version}</tag>-->
-            <!--                    <buildArgs>-->
-            <!--                        <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>-->
-            <!--                    </buildArgs>-->
-            <!--                </configuration>-->
-            <!--            </plugin>-->
-            <!--使用docker插件需开启docker端口-->
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
@@ -168,5 +135,4 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
 </project>
