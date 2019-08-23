@@ -46,7 +46,7 @@ services:
     container_name: myactivemq
     ports:
       - 61617:61616
-      - 8162:8161
+      - 8161:8161
 
 
 #  flowable:

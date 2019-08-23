@@ -19,27 +19,32 @@ public class ConsumerDistribute {
 
     MessageAdapter messageAdapter;
 
-    @JmsListener(destination = "messages_queue")
+    @JmsListener(destination = Constants.QUEUE)
     public void distribute(String json) {
         log.info("===============receive msg content:==============", json);
-        if (StringUtils.isEmpty(json)) {
-            return;
-        }
-        JSONObject rootJson = new JSONObject().parseObject(json);
-        JSONObject header = rootJson.getJSONObject("header");
-        String interfaceType = rootJson.getString("interfaceType");
+        try {
+            if (StringUtils.isEmpty(json)) {
+                return;
+            }
+            JSONObject rootJson = new JSONObject().parseObject(json);
+            JSONObject header = rootJson.getJSONObject("header");
+            String interfaceType = rootJson.getString("interfaceType");
 
-        if (StringUtils.isEmpty(interfaceType)) {
-            return;
-        }
-        if (Constants.MSG_SMS.equalsIgnoreCase(interfaceType)) {
-           messageAdapter=emailService;
+            if (StringUtils.isEmpty(interfaceType)) {
+                return;
+            }
+            if (Constants.MSG_SMS.equalsIgnoreCase(interfaceType)) {
+                messageAdapter=emailService;
+            }
+
+            if (messageAdapter == null) {
+                return;
+            }
+            JSONObject content = rootJson.getJSONObject("content");
+            messageAdapter.sendMsg(content);
+        } catch (Exception e) {
+            log.error("========================  error");
         }
 
-        if (messageAdapter == null) {
-            return;
-        }
-        JSONObject content = rootJson.getJSONObject("content");
-        messageAdapter.sendMsg(content);
     }
 }

@@ -11,12 +11,12 @@ spring:
   application:
     name: ppx-member
   activemq:
-    pool:
-      enabled: true
+#    pool:
+#      enabled: true
     password: admin
     user: admin
-    broker-url: tcp://106.13.66.5:61616
-    in-memory: true
+    broker-url: tcp://106.13.66.5:61617
+#    in-memory: false
 
   thymeleaf:
     cache: false
