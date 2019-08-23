@@ -21,14 +21,14 @@ public class ConsumerDistribute {
 
     @JmsListener(destination = Constants.QUEUE)
     public void distribute(String json) {
-        log.info("===============receive msg content:==============", json);
+        log.info("===============receive msg content:=============="+ json);
         try {
             if (StringUtils.isEmpty(json)) {
                 return;
             }
             JSONObject rootJson = new JSONObject().parseObject(json);
             JSONObject header = rootJson.getJSONObject("header");
-            String interfaceType = rootJson.getString("interfaceType");
+            String interfaceType = header.getString("interfaceType");
 
             if (StringUtils.isEmpty(interfaceType)) {
                 return;
