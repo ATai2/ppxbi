@@ -60,6 +60,13 @@ public class MemberServiceImpl extends BaseApiService implements MemberService {
 
     @Override
     public ResponseBase login(@RequestBody UserEntity userEntity) {
+        String username = userEntity.getUsername();
+        String password = userEntity.getPassword();
+        if (StringUtils.isEmpty(userEntity)||StringUtils.isEmpty(password)) {
+            return setError("userName or pwd can't be null");
+        }
+//        MD5
+        UserEntity login = memberDao.login(username, password);
 
         return null;
     }
