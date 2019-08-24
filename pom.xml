@@ -33,6 +33,7 @@
 
     <properties>
         <activiti.version>6.0.0</activiti.version>
+        <alibaba.version>1.2.59</alibaba.version>
         <dockerfile-maven-version>1.4.9</dockerfile-maven-version>
         <docker.image.prefix>atai</docker.image.prefix>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -196,6 +197,13 @@
         </dependencies>
     </dependencyManagement>
     <dependencies>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${alibaba.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>

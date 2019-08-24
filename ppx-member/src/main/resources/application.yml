@@ -7,6 +7,7 @@ eureka:
     serviceUrl:
       defaultZone: http://106.13.66.5:8761/eureka/
 
+
 spring:
   application:
     name: ppx-member

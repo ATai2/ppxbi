@@ -10,7 +10,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ppx-member</artifactId>
+    <version>v1</version>
+
+
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
@@ -21,11 +30,11 @@
             <artifactId>spring-boot-starter-activemq</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.apache.activemq</groupId>-->
-<!--            <artifactId>activemq-pool</artifactId>-->
-<!--            <version>5.15.9</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.activemq</groupId>-->
+        <!--            <artifactId>activemq-pool</artifactId>-->
+        <!--            <version>5.15.9</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
