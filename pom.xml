@@ -18,6 +18,7 @@
         <module>member</module>
         <module>ppx-member</module>
         <module>ppx-message</module>
+        <module>ppx-wx-api</module>
     </modules>
     <packaging>pom</packaging>
 
