@@ -9,10 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <version>v1</version>
+    <packaging>jar</packaging>
     <name>ppx-message</name>
     <description>Demo project for Spring Boot</description>
     <artifactId>ppx-message</artifactId>
-    <version>v1</version>
 
     <dependencies>
         <dependency>
@@ -27,6 +28,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
 
         <dependency>

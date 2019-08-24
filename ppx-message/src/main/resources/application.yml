@@ -4,8 +4,8 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-#      defaultZone: http://106.13.66.5:8761/eureka/
+#      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://106.13.66.5:8761/eureka/
 
 spring:
   application:
@@ -19,13 +19,17 @@ spring:
     broker-url: tcp://106.13.66.5:61617
 #    in-memory: true
 
-#  mail:
-#    host:smtp163.com
-#    username:wangtaihe567@163.com
-#    password:1114677814
-#    enable:true
-#    smtp:
-#      auth:true
-#    starttls:
-#      enable:true
-#      requied:true
+  mail:
+    host: smtp.163.com
+    username: wangtaihe567@163.com
+    password: wth123456
+    enable: true
+    smtp:
+      auth: true
+    starttls:
+      enable: true
+      requied: true
+
+msg:
+  subject: "test dingyuehao"
+  text: "kldjflsdflkaweiofajsdfjwioef"
