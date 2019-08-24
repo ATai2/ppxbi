@@ -58,6 +58,12 @@ public class MemberServiceImpl extends BaseApiService implements MemberService {
         return setResultSuccess("reg success");
     }
 
+    @Override
+    public ResponseBase login(@RequestBody UserEntity userEntity) {
+
+        return null;
+    }
+
     private String emailJson(String email) {
         JSONObject rootJson = new JSONObject();
         JSONObject header = new JSONObject();

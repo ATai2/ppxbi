@@ -36,5 +36,6 @@ public class EmailService implements MessageAdapter {
 
         javaMailSender.send(simpleMailMessage);
 
+        log.info("reg send email");
     }
 }

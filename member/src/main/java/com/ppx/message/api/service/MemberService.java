@@ -16,5 +16,7 @@ public interface MemberService {
     ResponseBase regUser(@RequestBody UserEntity userEntity);
 
 
+    @PostMapping("/login")
+    ResponseBase login(@RequestBody UserEntity userEntity);
 
 }
