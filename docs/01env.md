@@ -5,9 +5,10 @@ issues:
 
 
 项目概述
+https://github.com/ituser-zq/itmayiedu-shopp-parent  
 * 会员系统
 * 消息服务平台   ---mq，jms， 短信
-* web系统
+* web系统   
     
 
 ** pc wx h5

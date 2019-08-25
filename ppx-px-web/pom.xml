@@ -32,6 +32,12 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.ppx</groupId>
+            <artifactId>member</artifactId>
+            <version>v1</version>
+        </dependency>
     </dependencies>
 
 </project>
