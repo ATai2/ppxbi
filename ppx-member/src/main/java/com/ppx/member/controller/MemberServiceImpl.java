@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PostConstruct;
@@ -81,6 +82,19 @@ public class MemberServiceImpl extends BaseApiService implements MemberService {
         jsonObject.put("memberToken", token);
         return setResultSuccess(jsonObject);
     }
+
+    @RequestMapping("/findbytoken")
+    public ResponseBase findByTokenUser(String token) {
+
+        if (StringUtils.isEmpty(token)) {
+            return setError("token can't be empty");
+        }
+        String userId = redisServer.get(token);
+
+        UserEntity entity = memberDao.findByID(Long.parseLong(userId));
+        return setResultSuccess(entity);
+    }
+
 
     private String emailJson(String email) {
         JSONObject rootJson = new JSONObject();
