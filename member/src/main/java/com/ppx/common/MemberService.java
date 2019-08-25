@@ -1,4 +1,4 @@
-package com.ppx.member.service;
+package com.ppx.common;
 
 import com.ppx.common.base.ResponseBase;
 import com.ppx.common.entity.UserEntity;

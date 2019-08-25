@@ -15,5 +15,4 @@ public class UserEntity {
     private String email;
     private Date created;
     private Date updated;
-
 }

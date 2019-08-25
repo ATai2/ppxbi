@@ -9,7 +9,7 @@ import org.springframework.jms.annotation.EnableJms;
 @EnableEurekaClient
 @EnableJms
 @SpringBootApplication
-@MapperScan("com.ppx.dao")
+@MapperScan("com.ppx.member.dao")
 public class PpxMemberApplication {
 
     public static void main(String[] args) {

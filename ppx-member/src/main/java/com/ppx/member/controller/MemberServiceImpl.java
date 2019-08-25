@@ -3,10 +3,13 @@ package com.ppx.member.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.ppx.common.base.BaseApiService;
 import com.ppx.common.base.ResponseBase;
-import com.ppx.member.service.MemberService;
+import com.ppx.common.utils.TokenUtils;
+import com.ppx.common.MemberService;
 import com.ppx.common.base.Constants;
 import com.ppx.common.entity.UserEntity;
 import com.ppx.member.dao.MemberDao;
+import com.ppx.member.service.RedisServerImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.PostConstruct;
 
 //import com.ppx.api.mq.RegisterMailboxProducer;
-
+@Slf4j
 @RestController
 public class MemberServiceImpl extends BaseApiService implements MemberService {
     @Value("${MESSAGEQUEE}")
@@ -26,12 +29,15 @@ public class MemberServiceImpl extends BaseApiService implements MemberService {
     private MemberDao memberDao;
 
     @Autowired
+    RedisServerImpl redisServer;
+    @Autowired
     private RegisterMailboxProducer registerMailboxProducer;
 
     @PostConstruct
-    void sendong(){
+    void sendong() {
         sendMsg(emailJson("l1111111"));
     }
+
     @Override
     public ResponseBase findUserById(Long userId) {
 
@@ -62,13 +68,18 @@ public class MemberServiceImpl extends BaseApiService implements MemberService {
     public ResponseBase login(@RequestBody UserEntity userEntity) {
         String username = userEntity.getUsername();
         String password = userEntity.getPassword();
-        if (StringUtils.isEmpty(userEntity)||StringUtils.isEmpty(password)) {
+        if (StringUtils.isEmpty(userEntity) || StringUtils.isEmpty(password)) {
             return setError("userName or pwd can't be null");
         }
 //        MD5
         UserEntity login = memberDao.login(username, password);
-
-        return null;
+        String token = TokenUtils.getToken();
+        Integer id = userEntity.getId();
+        log.info("====userinfo in redis",token,username);
+        redisServer.put(token, String.valueOf(id), Constants.TOKEN_MEMBER_TIME);
+        JSONObject jsonObject=new JSONObject();
+        jsonObject.put("memberToken", token);
+        return setResultSuccess(jsonObject);
     }
 
     private String emailJson(String email) {

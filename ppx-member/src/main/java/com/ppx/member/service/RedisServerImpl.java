@@ -4,11 +4,13 @@ import com.ppx.common.base.RedisServer;
 import com.ppx.common.utils.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.stereotype.Service;
 
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
+@Service
 public class RedisServerImpl implements RedisServer {
 
     @Autowired
