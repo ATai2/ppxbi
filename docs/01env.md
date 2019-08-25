@@ -2,6 +2,16 @@ issues:
 * spark-shell下shift键有向上的功能，填充上一步的命令
 
 
+
+
+项目概述
+* 会员系统
+* 消息服务平台   ---mq，jms， 短信
+* web系统
+    
+
+** pc wx h5
+
 前端组件：
 [Element-ui](http://element-cn.eleme.io/#/zh-CN/component/layout)
 [vue-admin-ui](https://panjiachen.github.io/vue-element-admin-site/zh/guide/essentials/permission.html#指令权限)
