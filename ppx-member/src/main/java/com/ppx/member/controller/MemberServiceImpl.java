@@ -74,7 +74,7 @@ public class MemberServiceImpl extends BaseApiService implements MemberService {
 //        MD5
         UserEntity login = memberDao.login(username, password);
         String token = TokenUtils.getToken();
-        Integer id = userEntity.getId();
+        Integer id = login.getId();
         log.info("====userinfo in redis",token,username);
         redisServer.put(token, String.valueOf(id), Constants.TOKEN_MEMBER_TIME);
         JSONObject jsonObject=new JSONObject();

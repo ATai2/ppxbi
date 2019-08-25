@@ -9,7 +9,7 @@ services:
 
   mysql:
     restart: always
-    image: mysql:latest
+    image: mysql:5.7
     container_name: mysql
     ports:
       - 3306:3306
