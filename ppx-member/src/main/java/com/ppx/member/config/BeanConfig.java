@@ -1,6 +1,6 @@
 package com.ppx.member.config;
 
-import com.ppx.common.base.Constants;
+import com.ppx.common.constants.Constants;
 import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

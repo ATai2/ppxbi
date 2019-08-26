@@ -1,9 +1,9 @@
 package com.ppx.message.mq;
 
 import com.alibaba.fastjson.JSONObject;
+import com.ppx.common.constants.Constants;
 import com.ppx.message.adapter.EmailService;
 import com.ppx.message.adapter.MessageAdapter;
-import com.ppx.common.base.Constants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;

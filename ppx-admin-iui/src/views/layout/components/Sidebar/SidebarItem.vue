@@ -20,7 +20,7 @@
           :is-nest="true"
           :item="child"
           :key="child.path"
-          :base-path="resolvePath(child.path)"
+          :com.ppx.common.base-path="resolvePath(child.path)"
           class="nest-menu" />
         <app-link v-else :to="resolvePath(child.path)" :key="child.name">
           <el-menu-item :index="resolvePath(child.path)">

@@ -52,5 +52,6 @@ spring:
 mybatis:
   type-aliases-package: com.ppx.ppxshiro.domain
 
-MESSAGEQUEE: message_queue
+messages:
+  queue: messages_queue
 

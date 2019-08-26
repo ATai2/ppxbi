@@ -83,7 +83,7 @@
                     <pattern>
                         {
                         "severity":"%level",
-                        "service":"${springAppName:-}",
+                        "com.ppx.common.service":"${springAppName:-}",
                         "trace":"%X{X-B3-TraceId:-}",
                         "span":"%X{X-B3-SpanId:-}",
                         "exportable":"%X{X-Span-Export:-}",

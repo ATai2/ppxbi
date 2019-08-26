@@ -51,7 +51,7 @@ First find `index.html`([root directory](https://github.com/PanJiaChen/vue-admin
 
 Import css and js of `Element`, and then import vue. Because `Element` is vue-dependent, vue must be import before it.
 
-Then find [webpack.base.conf.js](https://github.com/PanJiaChen/vue-admin-template/blob/element-ui-cdn/build/webpack.base.conf.js)
+Then find [webpack.com.ppx.common.base.conf.js](https://github.com/PanJiaChen/vue-admin-template/blob/element-ui-cdn/build/webpack.com.ppx.common.base.conf.js)
 Add `externals` to make webpack not package vue and element.
 
 ```

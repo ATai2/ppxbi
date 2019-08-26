@@ -62,7 +62,7 @@ npm run build --report
 
 引入 Element 的 css 和 js ，并且引入 vue 。因为 Element-Ui 是依赖 vue 的，所以必须在它之前引入 vue 。
 
-之后找到 [webpack.base.conf.js](https://github.com/PanJiaChen/vue-admin-template/blob/element-ui-cdn/build/webpack.base.conf.js) 加入 `externals` 让 webpack 不打包 vue 和 element
+之后找到 [webpack.com.ppx.common.base.conf.js](https://github.com/PanJiaChen/vue-admin-template/blob/element-ui-cdn/build/webpack.com.ppx.common.base.conf.js) 加入 `externals` 让 webpack 不打包 vue 和 element
 
 ```
 externals: {

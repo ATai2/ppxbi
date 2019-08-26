@@ -58,7 +58,7 @@
         </dependency>
         <dependency>
             <groupId>com.ppx</groupId>
-            <artifactId>member</artifactId>
+            <artifactId>ppx-common</artifactId>
             <version>v1</version>
         </dependency>
 

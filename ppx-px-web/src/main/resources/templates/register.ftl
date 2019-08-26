@@ -19,7 +19,7 @@
 <div class="ny-header">
     <div class="nb">
         <div class="logo">
-            <a href="../index.html"><img src="/sell/view/default/images/logo-reg.png" alt=""/></a>
+            <a href="../index.html"><img src=" /view/default/images/logo-reg.png" alt=""/></a>
             <span>&middot; 欢迎注册</span>
         </div>
         <div class="right">
@@ -236,10 +236,10 @@
     </div>
 </div>
 <div id="mask"></div>
-<script src="/sell/view/default/js/jquery-1.9.1.min.js"
+<script src=" /view/default/js/jquery-1.9.1.min.js"
         type="text/javascript"></script>
-<script src="/sell/view/default/js/main.js" type="text/javascript"></script>
-<script src="/sell/view/default/js/users.js" type="text/javascript"></script>
+<script src=" /view/default/js/main.js" type="text/javascript"></script>
+<script src=" /view/default/js/users.js" type="text/javascript"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {

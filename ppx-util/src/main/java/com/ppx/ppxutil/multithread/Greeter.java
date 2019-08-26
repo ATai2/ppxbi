@@ -1,4 +1,4 @@
-package com.ppx.ppxutil.multithread;//package com.ppx.base.multithread;
+package com.ppx.ppxutil.multithread;//package com.ppx.com.ppx.common.base.multithread;
 //
 //import akka.actor.AbstractActor;
 //

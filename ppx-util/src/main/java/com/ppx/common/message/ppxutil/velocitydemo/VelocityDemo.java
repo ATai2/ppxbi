@@ -1,4 +1,4 @@
-package com.ppx.common.message.ppxutil.velocitydemo;//package com.ppx.base.velocitydemo;
+package com.ppx.common.message.ppxutil.velocitydemo;//package com.ppx.com.ppx.common.base.velocitydemo;
 //
 //
 //import org.apache.velocity.Template;
