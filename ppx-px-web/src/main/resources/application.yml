@@ -1,5 +1,7 @@
 server:
   port: 9100
+  servlet:
+    context-path: /sell
 
 eureka:
   client:
@@ -10,4 +12,10 @@ eureka:
 spring:
   application:
     name: ppx-px-web
+
+  redis:
+    host: 106.13.66.5
+    port: 6379
+    password: rootatai
+    timeout: 1000
 

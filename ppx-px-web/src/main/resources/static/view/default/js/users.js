@@ -162,15 +162,14 @@ $(function() {
  	
  	//用户注册
  	$("#reg").click(function() { 
- 		// if (!checkUserName(true) || !checkPhone(true) || !checkSmscode() || !checkPwd(true) || !checkRePwd(true) || !checkAgree()) {
- 		// 	return;
- 		// }
- 		// var isOauth = $("#isOauth").length; //是否绑定第三方
+ 		if (!checkUserName(true) || !checkPhone(true) || !checkSmscode() || !checkPwd(true) || !checkRePwd(true) || !checkAgree()) {
+ 			return;
+ 		}
+ 		var isOauth = $("#isOauth").length; //是否绑定第三方
 
  		$.ajax({
 			type: "post",
-			url: "/register",
-			// url: "user_api.html?return_url="+(typeof(return_url) != "undefined"?return_url:""),
+			url: "user_api.html?return_url="+(typeof(return_url) != "undefined"?return_url:""),
 			data: {
 				act:'reg',
 				username:$.trim(username.val()),

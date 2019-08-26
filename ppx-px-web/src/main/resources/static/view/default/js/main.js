@@ -222,7 +222,7 @@ function setall(t, list) {
 }
 
 function loadLayer() {
-	$("body").append('<script src="view/default/js/layer.min.js"></script>');
+	$("body").append('<script src=".."></script>');
 }
 
 //添加多个商品到购物车   多个商品Id和规格分别用-分隔, 如    1-2-3   白色-64g

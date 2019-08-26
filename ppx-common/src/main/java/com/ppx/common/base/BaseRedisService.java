@@ -2,11 +2,11 @@ package com.ppx.common.base;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
 
-@Service("baseRedisService")
+@Component
 public class BaseRedisService {
 
     @Autowired

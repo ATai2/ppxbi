@@ -24,14 +24,14 @@ public class ResponseBase {
 		this.data = data;
 	}
 
-	public static void main(String[] args) {
-		ResponseBase responseBase = new ResponseBase();
-		responseBase.setData("123456");
-		responseBase.setMsg("success");
-		responseBase.setRtnCode(200);
-		System.out.println(responseBase.toString());
-		log.info("itmayiedu...");
-	}
+//	public static void main(String[] args) {
+//		ResponseBase responseBase = new ResponseBase();
+//		responseBase.setData("123456");
+//		responseBase.setMsg("success");
+//		responseBase.setRtnCode(200);
+//		System.out.println(responseBase.toString());
+//		log.info("itmayiedu...");
+//	}
 
 	@Override
 	public String toString() {
