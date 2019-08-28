@@ -9,6 +9,7 @@ import javax.jms.Queue;
 
 @Configuration
 public class BeanConfig {
+
     @Bean
     public Queue queue(){
         return new ActiveMQQueue(Constants.QUEUE);

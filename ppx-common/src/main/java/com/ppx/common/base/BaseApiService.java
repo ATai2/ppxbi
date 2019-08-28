@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BaseApiService {
-    @Autowired(required = false)
-    protected BaseRedisService baseRedisService;
+    @Autowired
+    protected AbstractBaseRedisService baseRedisService;
 
     public ResponseBase setResultError(Integer code, String msg) {
         return setResult(code, msg, null);

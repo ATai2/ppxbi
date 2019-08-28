@@ -29,6 +29,9 @@ https://docs.scrapy.org/en/latest/intro/tutorial.html
 ELK
 http://localhost:5601/app/kibana#/management/kibana/index
 
+外网映射工具
+ngrok
+natapp
 
 
 
