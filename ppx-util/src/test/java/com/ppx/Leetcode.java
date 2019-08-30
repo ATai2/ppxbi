@@ -1,4 +1,4 @@
-package com.ppx.common.message.ppxutil;
+package com.ppx;
 
 import org.junit.Test;
 
