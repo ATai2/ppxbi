@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class CheckUtil {
 
-	public static final String tooken = "itmayiedu"; // 开发者自行定义Tooken
+	public static final String tooken = "ppx"; // 开发者自行定义Tooken
 
 	public static boolean checkSignature(String signature, String timestamp, String nonce) {
 		// 1.定义数组存放tooken，timestamp,nonce
