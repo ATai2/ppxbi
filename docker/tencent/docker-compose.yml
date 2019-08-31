@@ -1,0 +1,13 @@
+version: '3'
+services:
+  redis:
+    image: atai2/ppx-wx-api:v1
+    restart: always
+    ports:
+      - 80:9200
+
+
+
+
+
+
