@@ -21,6 +21,7 @@
         <module>ppx-wx-api</module>
         <module>ppx-order</module>
         <module>ppx-pay</module>
+        <module>ppx-txmanager</module>
         <!--        <module>ppx-px-web</module>-->
     </modules>
     <packaging>pom</packaging>
@@ -45,6 +46,7 @@
         <mybatisplus-spring-boot-starter.version>1.0.5</mybatisplus-spring-boot-starter.version>
         <mybatis-spring-boot-starter.version>2.0.0</mybatis-spring-boot-starter.version>
         <mybatis-plus.version>2.3</mybatis-plus.version>
+        <lcn.last.version>5.0.2</lcn.last.version>
         <!--        project-->
         <dockerfile-maven-version>1.4.9</dockerfile-maven-version>
         <docker.image.prefix>atai</docker.image.prefix>
