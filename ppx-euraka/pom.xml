@@ -18,11 +18,6 @@
     </parent>
 
     <properties>
-        <docker.image.prefix>atai</docker.image.prefix>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-
         <docker.repostory>hub.docker.com</docker.repostory>
         <docker.registry.name>atai2</docker.registry.name>
     </properties>
@@ -56,16 +51,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <repositories>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
     <build>
         <plugins>
             <!--使用docker插件需开启docker端口-->

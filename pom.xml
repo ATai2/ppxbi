@@ -273,7 +273,7 @@
 
         <repository>
             <id>jsoftlocal-mvn-repo</id>
-            <url>file:/home/ubuntu/.m2/repo</url>
+            <url>file:/home/ubuntu/.m2/repository</url>
         </repository>
 
     </repositories>
