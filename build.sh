@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 echo 'start to build common module'
 
@@ -7,9 +7,6 @@ pwd
 mvn clean package
 mvn install
 #mvn com.spotify:docker-maven-plugin:1.1.1:build
-
-
-
 cd ..
 filelist=`ls ./`
 pattern="^ppx-"
@@ -18,7 +15,7 @@ do
 #  echo $file
   if [[ $file =~ $pattern ]];  then
     echo "right $file"
-
+    funcDir $file
   fi
 done
 
