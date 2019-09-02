@@ -49,7 +49,7 @@
         <lcn.last.version>5.0.2</lcn.last.version>
         <!--        project-->
         <dockerfile-maven-version>1.4.9</dockerfile-maven-version>
-        <docker.image.prefix>atai</docker.image.prefix>
+        <docker.image.prefix>atai2</docker.image.prefix>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -265,6 +265,17 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>jsoftlocal2-mvn-repo</id>
+            <url>file:D:\.m2\repository</url>
+        </repository>
+
+
+        <repository>
+            <id>jsoftlocal-mvn-repo</id>
+            <url>file:/home/ubuntu/.m2/repo</url>
+        </repository>
+
     </repositories>
     <build>
         <plugins>

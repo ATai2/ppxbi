@@ -74,22 +74,9 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.1.1</version>
                 <configuration>
-
                     <baseImage>openjdk:8-jre-alpine</baseImage>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
                     <dockerDirectory>${basedir}/docker</dockerDirectory>
-                    <!--                    <exposes>8761</exposes>-->
-<!--                    <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/${project.build.finalName}.jar"]</entryPoint>-->
-
-                    <forceTags>true</forceTags>
-                    <imageName>
-                        ${docker.registry.name}/${project.artifactId}:${project.version}
-                    </imageName>
-                    <imageTags>
-                        <!--docker的tag为项目版本号、latest-->
-                        <imageTag>${project.version}</imageTag>
-<!--                        <imageTag>latest</imageTag>-->
-                    </imageTags>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
@@ -99,6 +86,36 @@
                     </resources>
                 </configuration>
             </plugin>
+<!--            <plugin>-->
+<!--                <groupId>com.spotify</groupId>-->
+<!--                <artifactId>docker-maven-plugin</artifactId>-->
+<!--                <version>1.1.1</version>-->
+<!--                <configuration>-->
+
+<!--                    <baseImage>openjdk:8-jre-alpine</baseImage>-->
+<!--                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>-->
+<!--                    <dockerDirectory>${basedir}/docker</dockerDirectory>-->
+<!--                    &lt;!&ndash;                    <exposes>8761</exposes>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/${project.build.finalName}.jar"]</entryPoint>&ndash;&gt;-->
+
+<!--                    <forceTags>true</forceTags>-->
+<!--                    <imageName>-->
+<!--                        ${docker.registry.name}/${project.artifactId}:${project.version}-->
+<!--                    </imageName>-->
+<!--                    <imageTags>-->
+<!--                        &lt;!&ndash;docker的tag为项目版本号、latest&ndash;&gt;-->
+<!--                        <imageTag>${project.version}</imageTag>-->
+<!--&lt;!&ndash;                        <imageTag>latest</imageTag>&ndash;&gt;-->
+<!--                    </imageTags>-->
+<!--                    <resources>-->
+<!--                        <resource>-->
+<!--                            <targetPath>/</targetPath>-->
+<!--                            <directory>${project.build.directory}</directory>-->
+<!--                            <include>${project.build.finalName}.jar</include>-->
+<!--                        </resource>-->
+<!--                    </resources>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
