@@ -9,7 +9,7 @@
     </parent>
     <groupId>com.ppx</groupId>
     <artifactId>ppx-util</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>v1</version>
     <name>ppx-util</name>
     <description>Demo project for Spring Boot</description>
 
