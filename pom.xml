@@ -254,6 +254,12 @@
             <artifactId>spring-cloud-starter-sleuth</artifactId>
         </dependency>
 
+
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1.1</version>
+        </dependency>
     </dependencies>
 
     <repositories>
@@ -287,10 +293,7 @@
                 <configuration>
                     <baseImage>openjdk:8-jre-alpine</baseImage>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-                    <exposes>8761</exposes>
-                    <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-jar",
-                        "/${project.build.finalName}.jar"]
-                    </entryPoint>
+                    <dockerDirectory>${basedir}/docker</dockerDirectory>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
@@ -300,6 +303,27 @@
                     </resources>
                 </configuration>
             </plugin>
+
+<!--            <plugin>-->
+<!--                <groupId>com.spotify</groupId>-->
+<!--                <artifactId>docker-maven-plugin</artifactId>-->
+<!--                <version>1.1.1</version>-->
+<!--                <configuration>-->
+<!--                    <baseImage>openjdk:8-jre-alpine</baseImage>-->
+<!--                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>-->
+<!--                    <exposes>8761</exposes>-->
+<!--                    <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-jar",-->
+<!--                        "/${project.build.finalName}.jar"]-->
+<!--                    </entryPoint>-->
+<!--                    <resources>-->
+<!--                        <resource>-->
+<!--                            <targetPath>/</targetPath>-->
+<!--                            <directory>${project.build.directory}</directory>-->
+<!--                            <include>${project.build.finalName}.jar</include>-->
+<!--                        </resource>-->
+<!--                    </resources>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
 
 
 <!--            <plugin>-->

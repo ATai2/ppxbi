@@ -13,11 +13,6 @@
     <name>ppx-admin</name>
     <description>Demo project for Spring Boot</description>
 
-    <properties>
-        <java.version>1.8</java.version>
-        <spring-boot-admin.version>2.1.1</spring-boot-admin.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -64,27 +59,23 @@
     <build>
         <plugins>
             <!--使用docker插件需开启docker端口-->
-            <!--<plugin>-->
-            <!--<groupId>com.spotify</groupId>-->
-            <!--<artifactId>dockerfile-maven-plugin</artifactId>-->
-            <!--<version>${dockerfile-maven-version}</version>-->
-            <!--<executions>-->
-            <!--<execution>-->
-            <!--<id>default</id>-->
-            <!--<goals>-->
-            <!--<goal>build</goal>-->
-            <!--&lt;!&ndash;<goal>push</goal>&ndash;&gt;-->
-            <!--</goals>-->
-            <!--</execution>-->
-            <!--</executions>-->
-            <!--<configuration>-->
-            <!--<repository>atai/ppx-usermgt</repository>-->
-            <!--<tag>${project.version}</tag>-->
-            <!--<buildArgs>-->
-            <!--<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>-->
-            <!--</buildArgs>-->
-            <!--</configuration>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.1.1</version>
+                <configuration>
+                    <baseImage>openjdk:8-jre-alpine</baseImage>
+                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+                    <dockerDirectory>${basedir}/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
