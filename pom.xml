@@ -77,6 +77,9 @@
         <jwt.version>0.9.0</jwt.version>
         <hutool.version>4.1.1</hutool.version>
 
+<!--        winxin-->
+        <wx.versin>3.3.0</wx.versin>
+
     </properties>
 
     <dependencyManagement>
@@ -154,31 +157,7 @@
                 <artifactId>activiti-app-rest</artifactId>
                 <version>${activiti.version}</version>
             </dependency>
-            <!--<dependency>-->
-            <!--<groupId>com.github.penggle</groupId>-->
-            <!--<artifactId>kaptcha</artifactId>-->
-            <!--<version>${kaptcha.version}</version>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-            <!--<groupId>org.ehcache</groupId>-->
-            <!--<artifactId>ehcache</artifactId>-->
-            <!--<version>${ehcache.version}</version>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-            <!--<groupId>com.google.zxing</groupId>-->
-            <!--<artifactId>core</artifactId>-->
-            <!--<version>${zxing.version}</version>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-            <!--<groupId>org.apache.velocity</groupId>-->
-            <!--<artifactId>velocity</artifactId>-->
-            <!--<version>${velocity.version}</version>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-            <!--<groupId>com.ibeetl</groupId>-->
-            <!--<artifactId>beetl</artifactId>-->
-            <!--<version>${beetl.version}</version>-->
-            <!--</dependency>-->
+
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
@@ -208,22 +187,6 @@
                 <version>1.1.10</version>
             </dependency>
 
-            <!--<dependency>-->
-            <!--<groupId>net.sf.ehcache</groupId>-->
-            <!--<artifactId>ehcache-core</artifactId>-->
-            <!--<version>${ehcache.core.version}</version>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-            <!--<groupId>io.jsonwebtoken</groupId>-->
-            <!--<artifactId>jjwt</artifactId>-->
-            <!--<version>${jwt.version}</version>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-            <!--<groupId>cn.hutool</groupId>-->
-            <!--<artifactId>hutool-all</artifactId>-->
-            <!--<version>${hutool.version}</version>-->
-            <!--</dependency>-->
-
 
 
             <dependency>
@@ -241,15 +204,28 @@
 
 
             <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring-boot-web-starter</artifactId>
+                <version>1.4.1</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>weixin-java-miniapp</artifactId>
+                <version>${wx.versin}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.github.binarywang</groupId>
                 <artifactId>weixin-java-pay</artifactId>
-                <version>3.3.0</version>
+                <version>${wx.versin}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.github.binarywang</groupId>
                 <artifactId>weixin-java-miniapp</artifactId>
-                <version>3.3.0</version>
+                <version>${wx.versin}</version>
             </dependency>
 
             <dependency>
