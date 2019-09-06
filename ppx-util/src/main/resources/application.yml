@@ -24,9 +24,9 @@ spring:
 
 
 
-logging:
-  level:
-    root:  ERROR
-    org.springframework:  ERROR
-    org.mybatis:  ERROR
-    com.ppx.common.ppxutil:  DEBUG
+#logging:
+#  level:
+#    root:  ERROR
+#    org.springframework:  ERROR
+#    org.mybatis:  ERROR
+#    com.ppx.common.ppxutil:  DEBUG

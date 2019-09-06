@@ -28,7 +28,7 @@ public class AdminSwagger2Configuration {
                 .groupName("admin")
                 .apiInfo(adminApiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("org.linlinjava.litemall.admin.web"))
+                .apis(RequestHandlerSelectors.basePackage("com.ppx.admin.web"))
                 .paths(PathSelectors.any())
                 .build();
     }

@@ -23,9 +23,9 @@ spring:
       time-between-eviction-runs-millis:  60000
       filters:  stat,wall
 
-logging:
-  level:
-    root:  ERROR
-    org.springframework:  ERROR
-    org.mybatis:  ERROR
-    com.ppx.ppxlitemalldb:  DEBUG
+#logging:
+#  level:
+#    root:  ERROR
+#    org.springframework:  ERROR
+#    org.mybatis:  ERROR
+#    com.ppx.ppxlitemalldb:  DEBUG
