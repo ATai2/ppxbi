@@ -22,6 +22,7 @@
         <module>ppx-order</module>
         <module>ppx-pay</module>
         <module>ppx-txmanager</module>
+        <module>ppx-litemall-db</module>
         <!--        <module>ppx-px-web</module>-->
     </modules>
     <packaging>pom</packaging>
@@ -193,6 +194,20 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
             </dependency>
+
+            <!-- Spring Boot pagehelper 依赖 -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>1.2.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>1.1.10</version>
+            </dependency>
+
             <!--<dependency>-->
             <!--<groupId>net.sf.ehcache</groupId>-->
             <!--<artifactId>ehcache-core</artifactId>-->
