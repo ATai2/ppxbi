@@ -1,12 +1,12 @@
 package com.ppx.admin.web;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.linlinjava.litemall.core.util.ResponseUtil;
+import com.ppx.common.ppxutil.util.ResponseUtil;
 import com.ppx.ppxlitemalldb.service.LitemallGoodsProductService;
 import com.ppx.ppxlitemalldb.service.LitemallGoodsService;
 import com.ppx.ppxlitemalldb.service.LitemallOrderService;
 import com.ppx.ppxlitemalldb.service.LitemallUserService;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;

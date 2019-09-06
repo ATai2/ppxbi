@@ -1,15 +1,15 @@
 package com.ppx.admin.web;
 
+import com.ppx.common.ppxutil.util.JacksonUtil;
+import com.ppx.common.ppxutil.util.ResponseUtil;
+import com.ppx.common.ppxutil.util.bcrypt.BCryptPasswordEncoder;
+import com.ppx.ppxlitemalldb.domain.LitemallAdmin;
+import com.ppx.ppxlitemalldb.service.LitemallAdminService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.apache.shiro.subject.Subject;
-import org.linlinjava.litemall.core.util.JacksonUtil;
-import org.linlinjava.litemall.core.util.ResponseUtil;
-import org.linlinjava.litemall.core.util.bcrypt.BCryptPasswordEncoder;
-import com.ppx.ppxlitemalldb.domain.LitemallAdmin;
-import com.ppx.ppxlitemalldb.service.LitemallAdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
@@ -18,7 +18,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import static org.linlinjava.litemall.admin.util.AdminResponseCode.ADMIN_INVALID_ACCOUNT;
+import static com.ppx.admin.util.AdminResponseCode.ADMIN_INVALID_ACCOUNT;
+
 
 @RestController
 @RequestMapping("/admin/profile")

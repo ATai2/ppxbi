@@ -1,17 +1,17 @@
 package com.ppx.admin.web;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.linlinjava.litemall.admin.annotation.RequiresPermissionsDesc;
-import org.linlinjava.litemall.core.util.ResponseUtil;
-import org.linlinjava.litemall.core.validator.Order;
-import org.linlinjava.litemall.core.validator.Sort;
+import com.ppx.admin.annotation.RequiresPermissionsDesc;
+import com.ppx.common.ppxutil.util.ResponseUtil;
+import com.ppx.common.ppxutil.validator.Order;
+import com.ppx.common.ppxutil.validator.Sort;
 import com.ppx.ppxlitemalldb.domain.LitemallCoupon;
 import com.ppx.ppxlitemalldb.domain.LitemallCouponUser;
 import com.ppx.ppxlitemalldb.service.LitemallCouponService;
 import com.ppx.ppxlitemalldb.service.LitemallCouponUserService;
 import com.ppx.ppxlitemalldb.util.CouponConstant;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;

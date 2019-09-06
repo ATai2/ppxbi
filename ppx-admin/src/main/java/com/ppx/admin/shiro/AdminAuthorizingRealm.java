@@ -1,16 +1,17 @@
 package com.ppx.admin.shiro;
 
 
+import com.ppx.common.ppxutil.util.bcrypt.BCryptPasswordEncoder;
+import com.ppx.ppxlitemalldb.domain.LitemallAdmin;
+import com.ppx.ppxlitemalldb.service.LitemallAdminService;
+import com.ppx.ppxlitemalldb.service.LitemallPermissionService;
+import com.ppx.ppxlitemalldb.service.LitemallRoleService;
+import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationException;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
-import org.linlinjava.litemall.core.util.bcrypt.BCryptPasswordEncoder;
-import com.ppx.ppxlitemalldb.domain.LitemallAdmin;
-import com.ppx.ppxlitemalldb.service.LitemallAdminService;
-import com.ppx.ppxlitemalldb.service.LitemallPermissionService;
-import com.ppx.ppxlitemalldb.service.LitemallRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;

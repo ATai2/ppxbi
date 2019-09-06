@@ -1,13 +1,13 @@
 package com.ppx.admin.service;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.linlinjava.litemall.admin.dto.GoodsAllinone;
-import org.linlinjava.litemall.admin.vo.CatVo;
-import org.linlinjava.litemall.core.qcode.QCodeService;
-import org.linlinjava.litemall.core.util.ResponseUtil;
+import com.ppx.admin.dto.GoodsAllinone;
+import com.ppx.admin.vo.CatVo;
+import com.ppx.common.ppxutil.qcode.QCodeService;
+import com.ppx.common.ppxutil.util.ResponseUtil;
 import com.ppx.ppxlitemalldb.domain.*;
 import com.ppx.ppxlitemalldb.service.*;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,7 +19,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.linlinjava.litemall.admin.util.AdminResponseCode.GOODS_NAME_EXIST;
+import static com.ppx.admin.util.AdminResponseCode.GOODS_NAME_EXIST;
+
 
 @Service
 public class AdminGoodsService {

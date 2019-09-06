@@ -1,11 +1,11 @@
 package com.ppx.admin.service;
 
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.subject.Subject;
-import org.linlinjava.litemall.core.util.IpUtil;
+import com.ppx.common.ppxutil.util.IpUtil;
 import com.ppx.ppxlitemalldb.domain.LitemallAdmin;
 import com.ppx.ppxlitemalldb.domain.LitemallLog;
 import com.ppx.ppxlitemalldb.service.LitemallLogService;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
