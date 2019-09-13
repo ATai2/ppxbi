@@ -134,7 +134,7 @@ public class AdminAuthController {
     private Collection<String> toApi(Set<String> permissions) {
         if (systemPermissionsMap == null) {
             systemPermissionsMap = new HashMap<>();
-            final String basicPackage = "org.linlinjava.litemall.admin";
+            final String basicPackage = "com.ppx.admin";
             List<Permission> systemPermissions = PermissionUtil.listPermission(context, basicPackage);
             for (Permission permission : systemPermissions) {
                 String perm = permission.getRequiresPermissions().value()[0];
@@ -153,7 +153,6 @@ public class AdminAuthController {
                 apis.add("*");
                 return apis;
                 //                return systemPermissionsMap.values();
-
             }
         }
         return apis;

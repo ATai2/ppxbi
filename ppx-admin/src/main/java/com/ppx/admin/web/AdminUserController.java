@@ -1,6 +1,7 @@
 package com.ppx.admin.web;
 
 import com.ppx.admin.annotation.RequiresPermissionsDesc;
+import com.ppx.admin.request.UserRequest;
 import com.ppx.common.ppxutil.util.ResponseUtil;
 import com.ppx.common.ppxutil.validator.Order;
 import com.ppx.common.ppxutil.validator.Sort;
@@ -11,15 +12,12 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/admin/user")
+//@RequestMapping("/admin/user")
 @Validated
 public class AdminUserController {
     private final Log logger = LogFactory.getLog(AdminUserController.class);
@@ -29,7 +27,7 @@ public class AdminUserController {
 
     @RequiresPermissions("admin:user:list")
     @RequiresPermissionsDesc(menu = {"用户管理", "会员管理"}, button = "查询")
-    @GetMapping("/list")
+    @GetMapping("/admin/user/list")
     public Object list(String username, String mobile,
                        @RequestParam(defaultValue = "1") Integer page,
                        @RequestParam(defaultValue = "10") Integer limit,
@@ -37,5 +35,11 @@ public class AdminUserController {
                        @Order @RequestParam(defaultValue = "desc") String order) {
         List<LitemallUser> userList = userService.querySelective(username, mobile, page, limit, sort, order);
         return ResponseUtil.okList(userList);
+    }
+
+    @PostMapping("/user/add")
+    public Object addUser(@RequestBody UserRequest user){
+        logger.info(user.toString());
+        return  ResponseUtil.ok();
     }
 }

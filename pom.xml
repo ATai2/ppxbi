@@ -56,12 +56,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
 
-        <!--        activiti-->
-        <activiti.version>6.0.0</activiti.version>
         <weixin-java-mp.version>2.8.0</weixin-java-mp.version>
 
         <!--        utils-->
-        <!--        <guns.version>1.0.0</guns.version>-->
         <shiro.version>1.4.0</shiro.version>
         <fastjson.version>1.2.47</fastjson.version>
         <velocity.version>1.7</velocity.version>
@@ -250,6 +247,18 @@
                 <groupId>com.qiniu</groupId>
                 <artifactId>qiniu-java-sdk</artifactId>
                 <version>[7.2.0, 7.2.99]</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.codingapi.txlcn</groupId>
+                <artifactId>txlcn-tc</artifactId>
+                <version>5.0.2.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.codingapi.txlcn</groupId>
+                <artifactId>txlcn-txmsg-netty</artifactId>
+                <version>5.0.2.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
