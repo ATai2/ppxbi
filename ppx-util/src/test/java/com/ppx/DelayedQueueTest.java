@@ -1,17 +1,124 @@
 package com.ppx;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
-import java.util.concurrent.Delayed;
-import java.util.concurrent.TimeUnit;
+import java.util.Random;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Logger;
 
+@Slf4j
 public class DelayedQueueTest {
     @Test
-    public void test(){
+    public void test() {
+        TaskQueueDaemonThread taskQueueDaemonThread = new TaskQueueDaemonThread();
+        taskQueueDaemonThread.init();
+        Random random = new Random(10);
+        for (int i = 0; i < 10; i++) {
+            int finalI = i;
+            int time = random.nextInt(10);
+            taskQueueDaemonThread.put(time, new Runnable() {
+                @Override
+                public void run() {
+                    log.info("  runnable" + finalI);
+                }
+            });
+        }
 
+    }
 
+    @Test
+    public void testInterrupte() throws InterruptedException {
 
+        Thread thread = new Thread(new InterruptedRunnable());
+        thread.start();
+        Thread.sleep(2000);
+        thread.interrupt();
+    }
+
+    static class TaskQueueDaemonThread {
+
+        private static final Logger LOG = Logger.getLogger(TaskQueueDaemonThread.class.getName());
+
+        private TaskQueueDaemonThread() {
+        }
+
+        private static class LazyHolder {
+            private static TaskQueueDaemonThread taskQueueDaemonThread = new TaskQueueDaemonThread();
+        }
+
+        public static TaskQueueDaemonThread getInstance() {
+            return LazyHolder.taskQueueDaemonThread;
+        }
+
+        Executor executor = Executors.newFixedThreadPool(20);
+        /**
+         * 守护线程
+         */
+        private Thread daemonThread;
+
+        /**
+         * 初始化守护线程
+         */
+        public void init() {
+            daemonThread = new Thread(() -> execute());
+            daemonThread.setDaemon(true);
+            daemonThread.setName("Task Queue Daemon Thread");
+            daemonThread.start();
+        }
+
+        private void execute() {
+            System.out.println("start:" + System.currentTimeMillis());
+            while (true) {
+                try {
+                    //从延迟队列中取值,如果没有对象过期则队列一直等待，
+                    Task t1 = t.take();
+                    if (t1 != null) {
+                        //修改问题的状态
+                        Runnable task = t1.getTask();
+                        if (task == null) {
+                            continue;
+                        }
+                        executor.execute(task);
+                        LOG.info("[at task:" + task + "]   [Time:" + System.currentTimeMillis() + "]");
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    break;
+                }
+            }
+        }
+
+        /**
+         * 创建一个最初为空的新 DelayQueue
+         */
+        private DelayQueue<Task> t = new DelayQueue<>();
+
+        /**
+         * 添加任务，
+         * time 延迟时间
+         * task 任务
+         * 用户为问题设置延迟时间
+         */
+        public void put(long time, Runnable task) {
+            //转换成ns
+            long nanoTime = TimeUnit.NANOSECONDS.convert(time, TimeUnit.MILLISECONDS);
+            //创建一个任务
+            Task k = new Task(nanoTime, task);
+            //将任务放在延迟的队列中
+            t.put(k);
+        }
+
+        /**
+         * 结束订单
+         *
+         * @param task
+         */
+        public boolean endTask(Task<Runnable> task) {
+            return t.remove(task);
+        }
     }
 
     public static class Task<T extends Runnable> implements Delayed {
@@ -81,5 +188,23 @@ public class DelayedQueueTest {
         }
 
 
+    }
+
+
+    static class InterruptedRunnable implements Runnable {
+        Logger logger = Logger.getLogger(InterruptedRunnable.class.getName());
+        ReentrantLock reentrantLock = new ReentrantLock();
+
+        @Override
+        public void run() {
+            try {
+                reentrantLock.lock();
+//                reentrantLock.lockInterruptibly();
+                Thread.sleep(90000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            logger.info("    inter      "+Thread.currentThread().getName());
+        }
     }
 }
