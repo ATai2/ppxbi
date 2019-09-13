@@ -1,8 +1,5 @@
 package com.ppx.ppxgateway.service;
 
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-
 public class SimpleTimeCountService {
     private long timeStamp = getNowTime();
     private       int  reqCount  = 0;
@@ -25,8 +22,9 @@ public class SimpleTimeCountService {
     }
 
     private long getNowTime() {
-        LocalDateTime now = LocalDateTime.now();
-        return now.atZone(ZoneId.of("Asia/Shanghai")).toInstant().toEpochMilli();
+//        LocalDateTime now = LocalDateTime.now();
+//        return now.atZone(ZoneId.of("Asia/Shanghai")).toInstant().toEpochMilli();
+        return System.currentTimeMillis();
     }
 
 }
