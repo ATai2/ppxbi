@@ -15,14 +15,13 @@ public class RedisLockTest {
 
     @Before
     public void setUp(){
-//        Redisson redisson=Redisson.create();
 //单机
+//        Redisson redisson=Redisson.create();
 //        RedissonClient redisson = Redisson.create();
         Config config = new Config();
         config.useSingleServer().setAddress("redis://106.13.66.5:6379").setPassword("rootatai");
         redisson = Redisson.create(config);
 
-//
 ////主从
 //
 //        Config config = new Config();
