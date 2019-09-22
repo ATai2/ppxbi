@@ -5,7 +5,7 @@ import com.ppx.common.ppxutil.demos.demo1.util.MyArray;
 
 public class TestMyArray {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		//创建一个可变的数组
 		MyArray ma = new MyArray();
 		//获取长度

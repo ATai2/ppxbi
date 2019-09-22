@@ -6,7 +6,7 @@ public class TestQuickSort {
 	static  int x=0;
 	
 	
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		int[] array = new int[] {3,2,4,5,7,1,8,0};
 		bubbleSort(array);
 		System.out.println(Arrays.toString(array));

@@ -11,8 +11,8 @@ public class Leetcode {
 
 
     @Test
-    public void testSubdomainvisit() {
-//        https://leetcode.com/problems/subdomain-visit-count/
+    public void testSubdomain2visit() {
+//        https://leetcode.com/problems/subdomain2-visit-count/
         String[] cp = new String[]{"900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"};
         System.out.println(subdomainVisits(cp));
     }

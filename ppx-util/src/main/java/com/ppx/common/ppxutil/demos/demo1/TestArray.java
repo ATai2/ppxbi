@@ -2,7 +2,7 @@ package com.ppx.common.ppxutil.demos.demo1;
 
 public class TestArray {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		//创建一个数组
 		int[] arr1 = new int[3];
 		//获取数组长度

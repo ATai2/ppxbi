@@ -2,7 +2,7 @@ package com.ppx.common.ppxutil.demos.demo1;
 
 public class AddOneToHandred {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		int total=0;
 		int end=100;
 		//使用for循环计算

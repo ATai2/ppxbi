@@ -1,7 +1,7 @@
 package com.ppx.common.ppxutil.demos.hxp;
 
 public class CircleArrayQueueDemo {
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
 
     }
 

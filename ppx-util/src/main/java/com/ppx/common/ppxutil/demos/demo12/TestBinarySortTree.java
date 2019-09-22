@@ -2,7 +2,7 @@ package com.ppx.common.ppxutil.demos.demo12;
 
 public class TestBinarySortTree {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 //		int[] arr = new int[] {8,9,6,7,5,4};
 		int[] arr = new int[] {8,9,5,4,6,7};
 		//创建一颗二叉排序树

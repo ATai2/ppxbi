@@ -1,7 +1,7 @@
 package com.ppx.common.ppxutil.demos.hxp;
 
 public class MiGong {
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         int[][] map = new int[8][7];
         for (int i = 0; i < 7; i++) {
             map[0][i] = 1;

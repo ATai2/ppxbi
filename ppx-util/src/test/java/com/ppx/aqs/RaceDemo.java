@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 public class RaceDemo {
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         CyclicBarrier barrier=new CyclicBarrier(8);
         Thread[] play=new Thread[8];
         for (int i = 0; i < 8; i++) {

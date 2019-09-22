@@ -2,7 +2,7 @@ package com.ppx.common.ppxutil.demos.demo1;
 
 public class TestSearch {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		//目标数组
 		int[] arr = new int[] {2,3,5,6,8,4,9,0};
 		//目标元素

@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class CollectionDemo {
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         List<User> list=new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             User user=new User(i,"User"+i);

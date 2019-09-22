@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class TestOpArray {
 	
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		//解决数组的长度不可变的问题
 		int[] arr = new int[] {9,8,7};
 		//快速查看数组中的元素

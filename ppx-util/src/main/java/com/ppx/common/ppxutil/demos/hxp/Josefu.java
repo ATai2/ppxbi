@@ -2,7 +2,7 @@ package com.ppx.common.ppxutil.demos.hxp;
 
 public class Josefu {
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
 
         CircleSingleLinkedList circleSingleLinkedList = new CircleSingleLinkedList();
         circleSingleLinkedList.addBoy(25);

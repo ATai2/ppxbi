@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Stack;
 
 public class PolandNotation {
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         String suffixExpression = "3 4 + 5 * 6 -";
         List<String> listString = getListString(suffixExpression);
         System.out.println("rpnList=" + listString);

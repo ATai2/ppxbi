@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class TestGraph {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		Vertex v1 = new Vertex("A");
 		Vertex v2 = new Vertex("B");
 		Vertex v3 = new Vertex("C");

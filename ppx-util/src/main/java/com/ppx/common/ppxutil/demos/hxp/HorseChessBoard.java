@@ -10,7 +10,7 @@ public class HorseChessBoard {
     private static boolean[] visited;
     private static boolean finished;
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         System.out.println("begin");
         X = 8;
         Y = 8;

@@ -1,7 +1,7 @@
 package com.ppx.common.ppxutil.demos.hxp;
 
 public class ArrayStackDemo {
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         ArrayStack arrayStack=new ArrayStack(4);
         arrayStack.list();
     }

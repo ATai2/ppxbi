@@ -4,7 +4,7 @@ public class Queue8 {
     int max = 8;
     int[] array = new int[max];
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         Queue8 queue8 = new Queue8();
         queue8.check(0);
     }

@@ -3,7 +3,7 @@ package com.ppx.common.ppxutil.demos.hxp;
 import java.util.Arrays;
 
 public class Dijkstra {
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         char[] vertex = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
         int[][] matrix = new int[vertex.length][vertex.length];
         final int N = 65535;

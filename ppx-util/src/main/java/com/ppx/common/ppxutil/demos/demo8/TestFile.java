@@ -5,7 +5,7 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 
 public class TestFile {
-	public static void main(String[] args) throws Exception {
+	public static void main2(String[] args) throws Exception {
 		//字符串转byte数组
 		String binaryStr = "11110000111001011000110100011111000011001111100001101101110110011111000011111000001101011101100111110000110011111000110011";
 		int len;

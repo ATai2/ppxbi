@@ -1,7 +1,7 @@
 package com.ppx.common.ppxutil.demos.hxp;
 
 public class SeqSearch {
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         int arr[]={1,9,11,-1,34,89};
         System.out.println(seqSearch(arr,11));
     }

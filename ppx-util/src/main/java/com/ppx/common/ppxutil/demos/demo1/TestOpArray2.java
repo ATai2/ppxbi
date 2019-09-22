@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class TestOpArray2 {
 	//如何删除数组中的元素
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		//目标数组
 		int[] arr = new int[] {9,8,7,6,5,4};
 		//要删除的元素的下标

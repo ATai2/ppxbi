@@ -11,7 +11,7 @@ package com.ppx.common.ppxutil.demos.velocitydemo;//package com.ppx.com.ppx.comm
 //import java.io.StringWriter;
 //
 //public class VelocityDemo {
-//    public static void main(String[] args) {
+//    public static void main2(String[] args) {
 //        Velocity.init();
 //        VelocityContext context = new VelocityContext();
 //        context.put("name", new String("Velocity"));

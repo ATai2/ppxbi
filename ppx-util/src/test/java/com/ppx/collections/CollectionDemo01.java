@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 
 @Slf4j
 public class CollectionDemo01 {
-    public static void main(String[] args) throws InterruptedException{
+    public static void main2(String[] args) throws InterruptedException{
         ConcurrentLinkedDeque<String> list=new ConcurrentLinkedDeque();
         //添加数据
         Thread[] add=new Thread[100];

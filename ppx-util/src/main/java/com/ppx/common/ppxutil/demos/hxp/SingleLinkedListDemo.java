@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class SingleLinkedListDemo {
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         HeroNode hero1 = new HeroNode(1, "宋江", "及时雨");
         HeroNode hero2 = new HeroNode(2, "宋江2", "及时雨2");
         HeroNode hero3 = new HeroNode(3, "宋江3", "及时雨3");

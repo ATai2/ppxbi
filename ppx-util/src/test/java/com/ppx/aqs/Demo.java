@@ -14,7 +14,7 @@ public class Demo {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         Demo demo=new Demo();
         Thread[] th=new Thread[20];
         for (int i = 0; i < 20; i++) {

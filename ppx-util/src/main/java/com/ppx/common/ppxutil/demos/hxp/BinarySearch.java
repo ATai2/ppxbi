@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BinarySearch {
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         int[] arr = {1, 8, 10, 89, 1000, 1234};
         System.out.println(fibonacciSearch(arr,1000));
     }

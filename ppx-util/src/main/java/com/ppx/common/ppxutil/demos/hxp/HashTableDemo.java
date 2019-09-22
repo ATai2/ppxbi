@@ -3,7 +3,7 @@ package com.ppx.common.ppxutil.demos.hxp;
 import java.util.Scanner;
 
 public class HashTableDemo {
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         HashTab hashTab=new HashTab(7);
         String key="";
         Scanner scanner = new Scanner(System.in);

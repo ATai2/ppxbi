@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class RadixQueueSort {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		int[] arr = new int[] {23,6,189,45,9,287,56,1,798,34,65,652,5};
 		radixSort(arr);
 		System.out.println(Arrays.toString(arr));

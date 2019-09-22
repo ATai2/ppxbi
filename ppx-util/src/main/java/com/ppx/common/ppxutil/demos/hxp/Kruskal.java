@@ -9,7 +9,7 @@ public class Kruskal {
     int[][] matrix;
     final static int N = Integer.MAX_VALUE;
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         char[] vertex = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
         int[][] matrix = new int[vertex.length][vertex.length];
 

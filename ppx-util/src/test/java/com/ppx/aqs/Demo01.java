@@ -12,7 +12,7 @@ public class Demo01 {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         Demo01 demo=new Demo01();
         Thread[] th=new Thread[20];
         for (int i = 0; i < 20; i++) {

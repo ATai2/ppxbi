@@ -5,7 +5,7 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
 public class CarDemo {
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         //创建Semaphore
         Semaphore sp=new Semaphore(5);
 

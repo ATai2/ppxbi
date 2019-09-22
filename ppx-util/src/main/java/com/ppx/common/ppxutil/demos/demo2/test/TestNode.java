@@ -5,7 +5,7 @@ import com.ppx.common.ppxutil.demos.demo2.Node;
 
 public class TestNode {
 	
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		//创建节点
 		Node n1 = new Node(1);
 		Node n2 = new Node(2);

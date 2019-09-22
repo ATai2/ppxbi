@@ -5,7 +5,7 @@ import com.ppx.common.ppxutil.demos.demo2.MyStack;
 
 public class TestMyStack {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		//创建一个栈
 		MyStack ms = new MyStack();
 		//压入数组

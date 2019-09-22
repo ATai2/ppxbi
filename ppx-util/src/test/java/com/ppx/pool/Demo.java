@@ -13,7 +13,7 @@ public class Demo {
     private static final int STOP       =  1 << COUNT_BITS;
     private static final int TIDYING    =  2 << COUNT_BITS;
     private static final int TERMINATED =  3 << COUNT_BITS;
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
 
         System.out.println(COUNT_BITS+":"+Integer.toBinaryString(COUNT_BITS));
         System.out.println(CAPACITY+":"+Integer.toBinaryString(CAPACITY));

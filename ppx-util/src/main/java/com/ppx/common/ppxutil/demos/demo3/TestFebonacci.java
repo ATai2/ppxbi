@@ -2,7 +2,7 @@ package com.ppx.common.ppxutil.demos.demo3;
 
 public class TestFebonacci {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		//斐波那契数列：1 1 2 3 5 8 13
 		int i = febonacci(7);
 		System.out.println(i);

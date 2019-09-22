@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Date;
 
 public class BubbleSort {
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
 //        int arr[] = {3, 9, -1, 10, -2};
         int size = 80;
         int[] arr = new int[size];

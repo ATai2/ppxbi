@@ -6,7 +6,7 @@ package com.ppx.common.ppxutil.demos.hxp;
  * @author Administrator
  */
 public class Calculator {
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         String expression = "30+2*6-2";
         ArrayStack2 numStack = new ArrayStack2(10);
         ArrayStack2 operStack = new ArrayStack2(10);

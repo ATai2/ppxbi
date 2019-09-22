@@ -5,7 +5,7 @@ import com.ppx.common.ppxutil.demos.demo2.MyQueue;
 
 public class TestMyQueue {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		//创建一个队列
 		MyQueue mq = new MyQueue();
 		//入队

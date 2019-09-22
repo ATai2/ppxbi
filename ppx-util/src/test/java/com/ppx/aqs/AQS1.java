@@ -14,7 +14,7 @@ public class AQS1 {
         n.incrementAndGet();
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main2(String[] args) throws InterruptedException {
         Thread[] threads=new Thread[size];
         Thread[] threadsA=new Thread[size];
         for (int i = 0; i < size; i++) {

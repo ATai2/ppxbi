@@ -2,7 +2,7 @@ package com.ppx.common.ppxutil.demos.demo1;
 
 public class TestBinarySearch {
 	
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		//目标数组
 		int[] arr = new int[]{1,2,3,4,5,6,7,8,9};
 		//目标元素

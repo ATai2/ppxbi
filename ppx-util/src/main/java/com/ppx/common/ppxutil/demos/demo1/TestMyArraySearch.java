@@ -5,7 +5,7 @@ import com.ppx.common.ppxutil.demos.demo1.util.MyArray;
 
 public class TestMyArraySearch {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		MyArray ma = new MyArray();
 		ma.add(1);
 		ma.add(2);

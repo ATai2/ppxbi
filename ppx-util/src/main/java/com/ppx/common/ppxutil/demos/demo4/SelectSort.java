@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class SelectSort {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		int[] arr = new int[] {3,4,5,7,1,2,0,3,6,8};
 		selectSort(arr);
 		System.out.println(Arrays.toString(arr));

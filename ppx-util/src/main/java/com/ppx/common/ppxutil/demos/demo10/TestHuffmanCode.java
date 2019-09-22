@@ -6,7 +6,7 @@ import java.util.Map.Entry;
 
 public class TestHuffmanCode {
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
 //		String msg="can you can a can as a can canner can a can.";
 //		byte[] bytes = msg.getBytes();
 //		//进行赫夫曼编码压缩

@@ -23,6 +23,7 @@
         <module>ppx-pay</module>
         <module>ppx-txmanager</module>
         <module>ppx-litemall-db</module>
+        <module>learn</module>
         <!--        <module>ppx-px-web</module>-->
     </modules>
     <packaging>pom</packaging>
@@ -216,12 +217,6 @@
             <dependency>
                 <groupId>com.github.binarywang</groupId>
                 <artifactId>weixin-java-pay</artifactId>
-                <version>${wx.versin}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.github.binarywang</groupId>
-                <artifactId>weixin-java-miniapp</artifactId>
                 <version>${wx.versin}</version>
             </dependency>
 

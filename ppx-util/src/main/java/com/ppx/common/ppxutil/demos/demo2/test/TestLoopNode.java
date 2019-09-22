@@ -5,7 +5,7 @@ import com.ppx.common.ppxutil.demos.demo2.LoopNode;
 
 public class TestLoopNode {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		LoopNode n1 = new LoopNode(1);
 		LoopNode n2 = new LoopNode(2);
 		LoopNode n3 = new LoopNode(3);

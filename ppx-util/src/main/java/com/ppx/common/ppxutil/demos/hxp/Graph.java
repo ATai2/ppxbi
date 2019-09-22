@@ -11,7 +11,7 @@ public class Graph {
     boolean[] isVisited;  //if vertex has been visited
 
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         int n = 8;
         String[] vertexs = {"1", "2", "3", "4", "5", "6", "7", "8"};
         Graph graph = new Graph(n);

@@ -1,7 +1,7 @@
 package com.ppx.common.ppxutil.demos.demo8;
 
 public class MM {
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		String msg = "can you can a can as a can canner can a can.";
 		// 直接编码
 //		char[] strChar = msg.toCharArray();

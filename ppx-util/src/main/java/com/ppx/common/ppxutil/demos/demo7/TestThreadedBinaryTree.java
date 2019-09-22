@@ -2,7 +2,7 @@ package com.ppx.common.ppxutil.demos.demo7;
 
 public class TestThreadedBinaryTree {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		//创建一颗树
 		ThreadedBinaryTree binTree = new ThreadedBinaryTree();
 		//创建一个根节点

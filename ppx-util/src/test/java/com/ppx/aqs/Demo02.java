@@ -15,7 +15,7 @@ public class Demo02 {
         lock.unlock();
     }
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         Demo02 demo=new Demo02();
         new Thread(()->{
             demo.a();

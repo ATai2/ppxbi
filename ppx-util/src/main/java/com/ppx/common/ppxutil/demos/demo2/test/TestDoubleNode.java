@@ -5,7 +5,7 @@ import com.ppx.common.ppxutil.demos.demo2.DoubleNode;
 
 public class TestDoubleNode {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		//创建节点
 		DoubleNode n1 = new DoubleNode(1);
 		DoubleNode n2 = new DoubleNode(2);

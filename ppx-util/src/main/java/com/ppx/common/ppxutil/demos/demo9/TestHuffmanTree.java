@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class TestHuffmanTree {
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		int[] arr = {3,7,8,29,5,11,23,14};
 		Node node = createHuffmanTree(arr);
 		System.out.println(node);

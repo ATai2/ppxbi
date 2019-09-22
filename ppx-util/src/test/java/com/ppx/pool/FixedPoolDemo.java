@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 public class FixedPoolDemo {
 
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         //创建固定大小线程池
         ExecutorService pool=Executors.newFixedThreadPool(5);
         //创建10个任务给pool

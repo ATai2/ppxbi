@@ -2,7 +2,7 @@ package com.ppx.common.ppxutil.demos.demo13;
 
 public class TestHashTable {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		StuInfo s1 = new StuInfo(16, 3);
 		StuInfo s2 = new StuInfo(17, 11);
 		StuInfo s3 = new StuInfo(18, 23);

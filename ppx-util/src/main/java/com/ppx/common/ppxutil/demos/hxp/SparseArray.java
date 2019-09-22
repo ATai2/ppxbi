@@ -1,7 +1,7 @@
 package com.ppx.common.ppxutil.demos.hxp;
 
 public class SparseArray {
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         int chessArr1[][] = new int[11][11];
         chessArr1[1][2] = 1;
         chessArr1[2][2] = 2;

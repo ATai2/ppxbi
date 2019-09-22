@@ -3,7 +3,7 @@ package com.ppx.common.ppxutil.demos.hxp;
 import java.util.Arrays;
 
 public class SelectSort {
-    public static void main(String[] args) {
+    public static void main2(String[] args) {
         int[] arr = {101, 34, 119, 1, -1, 90, 123};
 
         selectSort(arr);

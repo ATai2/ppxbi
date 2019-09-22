@@ -12,7 +12,7 @@ public class FightQueryDemo {
     private static List<String> company= Arrays.asList("东方航空","南方航空","海南航空");
     private static List<String> fightList=new ArrayList<>();
 
-    public static void main(String[] args) throws InterruptedException{
+    public static void main2(String[] args) throws InterruptedException{
         String origin="BJ";
         String dest="SH";
         Thread[] threads=new Thread[company.size()];

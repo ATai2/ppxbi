@@ -2,7 +2,7 @@ package com.ppx.common.ppxutil.demos.demo5;
 
 public class TestBinaryTree {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		//创建一颗树
 		BinaryTree binTree = new BinaryTree();
 		//创建一个根节点
