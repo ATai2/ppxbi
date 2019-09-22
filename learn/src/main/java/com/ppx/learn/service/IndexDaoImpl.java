@@ -23,4 +23,8 @@ public class IndexDaoImpl implements IndexDao, InitializingBean {
     public void afterPropertiesSet() throws Exception {
         System.out.println("afterPropertiesSet");
     }
+
+    public void test(){
+        System.out.println("test");
+    }
 }
