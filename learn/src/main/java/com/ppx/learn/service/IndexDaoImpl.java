@@ -1,13 +1,13 @@
 package com.ppx.learn.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
 
 @Repository
-@Lazy
+@Slf4j
 public class IndexDaoImpl implements IndexDao, InitializingBean {
 
 
@@ -25,6 +25,8 @@ public class IndexDaoImpl implements IndexDao, InitializingBean {
     }
 
     public void test(){
-        System.out.println("test");
+        log.info("test");
     }
+
+
 }
