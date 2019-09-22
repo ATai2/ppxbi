@@ -1,4 +1,4 @@
-package com.ppx.learn.service;
+package com.ppx.learn.dao;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
@@ -7,7 +7,7 @@ import javax.annotation.PostConstruct;
 
 @Repository
 @Slf4j
-public class IndexDaoImpl   {
+public class IndexDaoImpl implements IndexDao  {
 //public class IndexDaoImpl implements IndexDao, InitializingBean {
 
 

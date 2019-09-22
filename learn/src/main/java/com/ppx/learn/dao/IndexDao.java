@@ -1,4 +1,4 @@
-package com.ppx.learn.service;
+package com.ppx.learn.dao;
 
 public interface IndexDao {
     void test();

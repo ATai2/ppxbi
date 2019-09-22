@@ -1,5 +1,6 @@
 package com.ppx.learn.service;
 
+import com.ppx.learn.dao.IndexDaoImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,6 @@ public class IndexDaoImplTest {
 
     @Test
     public void test(){
-//        IndexDaoImpl dao=new IndexDaoImpl();
         dao.test();
     }
 }
