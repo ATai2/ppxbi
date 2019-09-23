@@ -14,7 +14,13 @@ public class IndexDaoImplTest {
     IndexDaoImpl dao;
 
     @Test
-    public void test(){
+    public void test() {
         dao.test();
     }
+
+    @Test
+    public void testSpeak() {
+        dao.speak("ssss");
+    }
+
 }

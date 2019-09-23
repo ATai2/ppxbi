@@ -28,5 +28,9 @@ public class IndexDaoImpl implements IndexDao  {
         log.info("test");
     }
 
+    public void speak(String msg){
+        log.info(msg);
+
+    }
 
 }
