@@ -13,62 +13,63 @@ import java.net.URLClassLoader;
 public class ProxyUtil {
 
     /**
-     *  content --->string
-     *  .java  io
+     * content --->string
+     * .java  io
      * .class
-     *
-     *
-     *
+     * <p>
+     * <p>
+     * <p>
      * .new   反射----》class
+     *
      * @return
      */
-    public static Object newInstance(Object target){
-        Object proxy=null;
+    public static Object newInstance(Object target) {
+        Object proxy = null;
         Class targetInf = target.getClass().getInterfaces()[0];
-        Method methods[] =targetInf.getDeclaredMethods();
-        String line="\n";
-        String tab ="\t";
+        Method methods[] = targetInf.getDeclaredMethods();
+        String line = "\n";
+        String tab = "\t";
         String infName = targetInf.getSimpleName();
-        String content ="";
-        String packageContent = "package com.google;"+line;
-        String importContent = "import "+targetInf.getName()+";"+line;
-        String clazzFirstLineContent = "public class $Proxy implements "+infName+"{"+line;
-        String filedContent  =tab+"private "+infName+" target;"+line;
-        String constructorContent =tab+"public $Proxy ("+infName+" target){" +line
-                                  +tab+tab+"this.target =target;"
-                                  +line+tab+"}"+line;
+        String content = "";
+        String packageContent = "package com.google;" + line;
+        String importContent = "import " + targetInf.getName() + ";" + line;
+        String clazzFirstLineContent = "public class $Proxy implements " + infName + "{" + line;
+        String filedContent = tab + "private " + infName + " target;" + line;
+        String constructorContent = tab + "public $Proxy (" + infName + " target){" + line
+                + tab + tab + "this.target =target;"
+                + line + tab + "}" + line;
         String methodContent = "";
         for (Method method : methods) {
             String returnTypeName = method.getReturnType().getSimpleName();
-            String methodName =method.getName();
+            String methodName = method.getName();
             // Sting.class String.class
             Class args[] = method.getParameterTypes();
             String argsContent = "";
-            String paramsContent="";
-            int flag =0;
+            String paramsContent = "";
+            int flag = 0;
             for (Class arg : args) {
                 String temp = arg.getSimpleName();
                 //String
                 //String p0,Sting p1,
-                argsContent+=temp+" p"+flag+",";
-                paramsContent+="p"+flag+",";
+                argsContent += temp + " p" + flag + ",";
+                paramsContent += "p" + flag + ",";
                 flag++;
             }
-            if (argsContent.length()>0){
-                argsContent=argsContent.substring(0,argsContent.lastIndexOf(",")-1);
-                paramsContent=paramsContent.substring(0,paramsContent.lastIndexOf(",")-1);
+            if (argsContent.length() > 0) {
+                argsContent = argsContent.substring(0, argsContent.lastIndexOf(",") - 1);
+                paramsContent = paramsContent.substring(0, paramsContent.lastIndexOf(",") - 1);
             }
 
-            methodContent+=tab+"public "+returnTypeName+" "+methodName+"("+argsContent+") {"+line
-                          +tab+tab+"System.out.println(\"log\");"+line
-                          +tab+tab+"target."+methodName+"("+paramsContent+");"+line
-                          +tab+"}"+line;
+            methodContent += tab + "public " + returnTypeName + " " + methodName + "(" + argsContent + ") {" + line
+                    + tab + tab + "System.out.println(\"log\");" + line
+                    + tab + tab + "target." + methodName + "(" + paramsContent + ");" + line
+                    + tab + "}" + line;
 
         }
 
-        content=packageContent+importContent+clazzFirstLineContent+filedContent+constructorContent+methodContent+"}";
+        content = packageContent + importContent + clazzFirstLineContent + filedContent + constructorContent + methodContent + "}";
 
-        File file =new File("d:\\com\\google\\$Proxy.java");
+        File file = new File("D:\\com\\google\\$Proxy.java");
         try {
             if (!file.exists()) {
                 file.createNewFile();
@@ -78,7 +79,6 @@ public class ProxyUtil {
             fw.write(content);
             fw.flush();
             fw.close();
-
 
             JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
 
@@ -98,12 +98,9 @@ public class ProxyUtil {
             proxy = constructor.newInstance(target);
             //clazz.newInstance();
             //Class.forName()
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-
 
 
         /**
