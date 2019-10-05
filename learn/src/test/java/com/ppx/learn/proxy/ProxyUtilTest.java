@@ -11,13 +11,17 @@ import java.lang.reflect.Proxy;
 public class ProxyUtilTest {
 
     @Test
-    public void newInstance() {
+    public void newInstance() throws ClassNotFoundException {
 //        ProxyUtil.newInstance(new LubanDaoImpl());
 
-         LubanDao lubanDao = (LubanDao) Proxy.newProxyInstance(ProxyUtil.class.getClassLoader(),
-                 new Class[]{LubanDao.class},
-                 new LubanInvocationHandler(new LubanDaoImpl()));
-         lubanDao.query();
+        LubanDao lubanDao = (LubanDao) Proxy.newProxyInstance(ProxyUtil.class.getClassLoader(),
+                new Class[]{LubanDao.class},
+                new LubanInvocationHandler(new LubanDaoImpl()));
+        lubanDao.query();
+
+
+
+        Class.forName("");
 
     }
 }

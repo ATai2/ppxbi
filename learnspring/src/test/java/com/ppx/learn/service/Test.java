@@ -1,8 +1,8 @@
 package com.ppx.learn.service;
 
-import com.ppx.learn.config.AppConfig;
-import com.ppx.learn.dao.IndexDao;
-import com.ppx.learn.dao.IndexDaoImpl;
+import com.ppx.learnspring.config.AppConfig;
+import com.ppx.learnspring.dao.IndexDao;
+import com.ppx.learnspring.dao.IndexDaoImpl;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import sun.misc.ProxyGenerator;
 
