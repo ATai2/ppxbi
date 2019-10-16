@@ -25,11 +25,11 @@ public class IndexDaoImpl implements IndexDao  {
 //    }
 
     public void test(){
-        log.info("test");
+//        log.info("test");
     }
 
     public void speak(String msg){
-        log.info(msg);
+//        log.info(msg);
 
     }
 
