@@ -38,6 +38,18 @@ services:
     environment:
       TZ: Asia/Shanghai
 
+  eureka2:
+    restart: always
+    image: atai2/ppx-eureka:v1
+    container_name: eureka
+    volumes:
+      - ./logs:/logs/app
+    ports:
+      - 8762:8761
+    environment:
+      TZ: Asia/Shanghai
+
+
   activemq:
     restart: always
     image: webcenter/activemq

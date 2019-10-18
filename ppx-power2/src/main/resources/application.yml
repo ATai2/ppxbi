@@ -1,12 +1,12 @@
 server:
-  port: 5000
+  port: 5001
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://106.13.66.5:8761/eureka/
   instance:
-    instance-id: power-1 #此实例注册到eureka服务端的唯一的实例ID
+    instance-id: power-2 #此实例注册到eureka服务端的唯一的实例ID
     prefer-ip-address: true #是否显示IP地址
 spring:
   application:

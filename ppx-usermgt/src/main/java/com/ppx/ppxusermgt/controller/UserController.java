@@ -66,6 +66,6 @@ public class UserController {
     @GetMapping("/getPower")
     public R getPower(){
 
-        return R.success("ok",restTemplate.getForObject("http://localhost:5000/power", Object.class));
+        return R.success("ok",restTemplate.getForObject("http://PPX-POWER/power", Object.class));
     }
 }
