@@ -5,6 +5,7 @@ import com.ppx.ppxusermgt.dao.UserDao;
 import com.ppx.ppxusermgt.entity.CommonResp;
 import com.ppx.ppxusermgt.entity.DemoModel;
 import com.ppx.ppxusermgt.entity.PpxUser;
+import com.ppx.ppxusermgt.service.PowerFeighClient;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -25,6 +26,10 @@ public class UserController {
 
     @Autowired
     RestTemplate restTemplate;
+
+    @Autowired
+    PowerFeighClient powerFeighClient;
+
     @Autowired
     private UserDao userDao;
 
@@ -65,7 +70,10 @@ public class UserController {
 
     @GetMapping("/getPower")
     public R getPower(){
-
+        return R.success("ok",powerFeighClient.getPower());
+    }
+    @GetMapping("/getPowerFeigh")
+    public R getPowerFeigh(){
         return R.success("ok",restTemplate.getForObject("http://PPX-POWER/power", Object.class));
     }
 }
