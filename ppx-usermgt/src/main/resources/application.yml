@@ -31,3 +31,16 @@ spring:
 #    hibernate.ddl-auto:update
 #logging:
 #  config: logback.xml
+feign:
+  hystrix:
+    enabled: true
+
+
+hystrix:
+  command:
+    execution:
+      isolation:
+        thread:
+          timeoutInMilliseconds: 3000
+      circuitBreaker:
+        requestVolumeThreshold: 5

@@ -1,0 +1,23 @@
+server:
+  port: 9100
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://106.13.66.5:8761/eureka/
+
+spring:
+  application:
+    name: ppx-zuul
+
+zuul:
+  prefix: /api
+  ignored-services: "*"
+  routes:
+    mypower:
+      serviceId: ppx-power
+      path: /power/**
+    myorder:
+      serviceId: ppx-order
+      path: /order/**
+

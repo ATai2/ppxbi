@@ -16,8 +16,8 @@
         <module>ppx-shiro</module>
         <module>ppx-shiro-mybatis</module>
         <module>ppx-common</module>
-<!--        <module>ppx-member</module>-->
-<!--        <module>ppx-message</module>-->
+        <!--        <module>ppx-member</module>-->
+        <!--        <module>ppx-message</module>-->
         <module>ppx-wx-api</module>
         <module>ppx-order</module>
         <module>ppx-pay</module>
@@ -27,6 +27,7 @@
         <module>ppx-ws</module>
         <module>ppx-power</module>
         <module>ppx-core</module>
+        <module>ppx-zuul</module>
         <!--        <module>learn-mybatis</module>-->
         <!--        <module>ppx-px-web</module>-->
     </modules>
@@ -79,7 +80,7 @@
         <jwt.version>0.9.0</jwt.version>
         <hutool.version>4.1.1</hutool.version>
 
-<!--        winxin-->
+        <!--        winxin-->
         <wx.versin>3.3.0</wx.versin>
 
     </properties>
@@ -97,6 +98,10 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-eureka</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-feign</artifactId>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -190,7 +195,6 @@
             </dependency>
 
 
-
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-mail</artifactId>
@@ -202,7 +206,6 @@
                 <artifactId>spring-boot-starter-json</artifactId>
                 <version>2.1.7.RELEASE</version>
             </dependency>
-
 
 
             <dependency>
@@ -305,6 +308,11 @@
             <artifactId>spring-cloud-starter-sleuth</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+
 
         <dependency>
             <groupId>javax.activation</groupId>
@@ -355,46 +363,46 @@
                 </configuration>
             </plugin>
 
-<!--            <plugin>-->
-<!--                <groupId>com.spotify</groupId>-->
-<!--                <artifactId>docker-maven-plugin</artifactId>-->
-<!--                <version>1.1.1</version>-->
-<!--                <configuration>-->
-<!--                    <baseImage>openjdk:8-jre-alpine</baseImage>-->
-<!--                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>-->
-<!--                    <exposes>8761</exposes>-->
-<!--                    <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-jar",-->
-<!--                        "/${project.build.finalName}.jar"]-->
-<!--                    </entryPoint>-->
-<!--                    <resources>-->
-<!--                        <resource>-->
-<!--                            <targetPath>/</targetPath>-->
-<!--                            <directory>${project.build.directory}</directory>-->
-<!--                            <include>${project.build.finalName}.jar</include>-->
-<!--                        </resource>-->
-<!--                    </resources>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>com.spotify</groupId>-->
+            <!--                <artifactId>docker-maven-plugin</artifactId>-->
+            <!--                <version>1.1.1</version>-->
+            <!--                <configuration>-->
+            <!--                    <baseImage>openjdk:8-jre-alpine</baseImage>-->
+            <!--                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>-->
+            <!--                    <exposes>8761</exposes>-->
+            <!--                    <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-jar",-->
+            <!--                        "/${project.build.finalName}.jar"]-->
+            <!--                    </entryPoint>-->
+            <!--                    <resources>-->
+            <!--                        <resource>-->
+            <!--                            <targetPath>/</targetPath>-->
+            <!--                            <directory>${project.build.directory}</directory>-->
+            <!--                            <include>${project.build.finalName}.jar</include>-->
+            <!--                        </resource>-->
+            <!--                    </resources>-->
+            <!--                </configuration>-->
+            <!--            </plugin>-->
 
 
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                <version>2.0.1.RELEASE</version>-->
-<!--                <configuration>-->
-<!--                    <requiresUnpack>-->
-<!--                        <dependency>-->
-<!--                            <groupId>com.netflix.eureka</groupId>-->
-<!--                            <artifactId>eureka-core</artifactId>-->
-<!--                        </dependency>-->
-<!--                        <dependency>-->
-<!--                            <groupId>com.netflix.eureka</groupId>-->
-<!--                            <artifactId>eureka-client</artifactId>-->
-<!--                        </dependency>-->
-<!--                    </requiresUnpack>-->
-<!--                    <includeSystemScope>true</includeSystemScope>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.springframework.boot</groupId>-->
+            <!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--                <version>2.0.1.RELEASE</version>-->
+            <!--                <configuration>-->
+            <!--                    <requiresUnpack>-->
+            <!--                        <dependency>-->
+            <!--                            <groupId>com.netflix.eureka</groupId>-->
+            <!--                            <artifactId>eureka-core</artifactId>-->
+            <!--                        </dependency>-->
+            <!--                        <dependency>-->
+            <!--                            <groupId>com.netflix.eureka</groupId>-->
+            <!--                            <artifactId>eureka-client</artifactId>-->
+            <!--                        </dependency>-->
+            <!--                    </requiresUnpack>-->
+            <!--                    <includeSystemScope>true</includeSystemScope>-->
+            <!--                </configuration>-->
+            <!--            </plugin>-->
             <plugin>
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
