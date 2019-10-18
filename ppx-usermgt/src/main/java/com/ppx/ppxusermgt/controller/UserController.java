@@ -1,9 +1,10 @@
 package com.ppx.ppxusermgt.controller;
 
+import com.ppx.core.R;
 import com.ppx.ppxusermgt.dao.UserDao;
-import com.ppx.ppxusermgt.entity.PpxUser;
 import com.ppx.ppxusermgt.entity.CommonResp;
 import com.ppx.ppxusermgt.entity.DemoModel;
+import com.ppx.ppxusermgt.entity.PpxUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -21,6 +23,8 @@ import java.util.List;
 @Api(value = "User")
 public class UserController {
 
+    @Autowired
+    RestTemplate restTemplate;
     @Autowired
     private UserDao userDao;
 
@@ -48,13 +52,20 @@ public class UserController {
         userDao.saveAll(users);
         return res;
     }
+
     @ApiOperation(value = "test")
     @PostMapping("/demo2")
-    public void demo2(@RequestBody @Valid DemoModel demo, BindingResult result){
-        if(result.hasErrors()){
+    public void demo2(@RequestBody @Valid DemoModel demo, BindingResult result) {
+        if (result.hasErrors()) {
             for (ObjectError error : result.getAllErrors()) {
                 System.out.println(error.getDefaultMessage());
             }
         }
+    }
+
+    @GetMapping("/getPower")
+    public R getPower(){
+
+        return R.success("ok",restTemplate.getForObject("http://localhost:5000/power", Object.class));
     }
 }

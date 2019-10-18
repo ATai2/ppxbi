@@ -17,7 +17,8 @@ spring:
       minimum-idle: 5
     username: root
     password: root
-    url: jdbc:mysql://106.13.66.5:3306/atdb?charset=utf8mb4&useSSL=false
+    url: jdbc:mysql://localhost:3306/atdb?charset=utf8mb4&useSSL=false
+#    url: jdbc:mysql://106.13.66.5:3306/atdb?charset=utf8mb4&useSSL=false
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true

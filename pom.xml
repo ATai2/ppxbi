@@ -25,6 +25,8 @@
         <module>ppx-litemall-db</module>
         <module>learn</module>
         <module>ppx-ws</module>
+        <module>ppx-power</module>
+        <module>ppx-core</module>
         <!--        <module>learn-mybatis</module>-->
         <!--        <module>ppx-px-web</module>-->
     </modules>

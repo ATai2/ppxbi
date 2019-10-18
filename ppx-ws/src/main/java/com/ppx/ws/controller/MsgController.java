@@ -8,8 +8,10 @@ import org.springframework.messaging.Message;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+
+import java.security.Principal;
 
 @Controller
 
@@ -26,25 +28,40 @@ public class MsgController {
         return new Greeting("Hello, " + message.getName() + "!");
     }
 
-    @GetMapping("severSend")
-    public String serverSend(){
-        simpMessagingTemplate.convertAndSend("/topic/ssmsg","finished test");
-        return "";
+    @MessageMapping("/hello1")
+    @SendTo("/topic/greetings1")
+    public Greeting greeting1(HelloMessage message) throws Exception {
+        Thread.sleep(1000); // simulated delay
+        System.out.println(message.toString());
+        return new Greeting("Hello1, " + message.getName() + "!");
     }
 
+    @MessageMapping("/spittle")
+    @SendToUser("/user/notifications")
+    public String handleSpittle(
+            Principal principal, HelloMessage message) {
+
+        return "sssss";
+    }
+
+//    @GetMapping("severSend")
+//    public String serverSend(){
+//        simpMessagingTemplate.convertAndSend("/topic/ssmsg","finished test");
+//        return "";
+//    }
 
 
     @MessageMapping("/ppx/chat")
-    public String broadCast(Message<ActorEntity> msg){
+    public String broadCast(Message<ActorEntity> msg) {
         ActorEntity payload = msg.getPayload();
         System.out.println(payload.toString());
-        return "";
+        return "chat";
     }
 
     @MessageMapping("/test")
-    public String test(Message<String> msg){
+    public String test(Message<String> msg) {
         String payload = msg.getPayload();
-        System.out.println(payload );
-        return "";
+        System.out.println(payload);
+        return "1055";
     }
 }

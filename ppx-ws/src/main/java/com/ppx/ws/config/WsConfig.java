@@ -30,5 +30,6 @@ public class WsConfig implements WebSocketMessageBrokerConfigurer {
     public void configureMessageBroker(MessageBrokerRegistry registry) {
         registry.enableSimpleBroker("/topic","/user");
         registry.setApplicationDestinationPrefixes("/ppx");
+        registry.setUserDestinationPrefix("/user");
     }
 }
