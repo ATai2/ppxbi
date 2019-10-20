@@ -2,7 +2,6 @@ package com.ppx.ppxusermgt.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.ppx.core.R;
-import com.ppx.core.controller.BaseController;
 import com.ppx.ppxusermgt.dao.UserDao;
 import com.ppx.ppxusermgt.entity.CommonResp;
 import com.ppx.ppxusermgt.entity.DemoModel;
@@ -24,7 +23,7 @@ import java.util.List;
 @RequestMapping(value = "/user")
 @RestController
 @Api(value = "User")
-public class UserController extends BaseController {
+public class UserController   {
 
     @Autowired
     RestTemplate restTemplate;
@@ -80,5 +79,10 @@ public class UserController extends BaseController {
     @HystrixCommand(fallbackMethod = "fallbackMethod")
     public R getPowerFeigh() {
         return R.success("ok", restTemplate.getForObject("http://PPX-POWER/power", Object.class));
+    }
+
+
+    public R fallbackMethod(){
+        return R.error("降级信息").set("content","msg");
     }
 }

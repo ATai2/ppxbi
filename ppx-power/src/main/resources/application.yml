@@ -12,4 +12,8 @@ spring:
   application:
     name: ppx-power
 
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

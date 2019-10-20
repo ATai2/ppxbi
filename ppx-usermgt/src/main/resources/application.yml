@@ -44,3 +44,9 @@ hystrix:
           timeoutInMilliseconds: 3000
       circuitBreaker:
         requestVolumeThreshold: 5
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

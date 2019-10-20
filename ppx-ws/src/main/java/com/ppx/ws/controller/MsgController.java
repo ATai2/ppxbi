@@ -1,6 +1,7 @@
 package com.ppx.ws.controller;
 
 import com.ppx.ws.ActorEntity;
+import com.ppx.ws.config.Contains;
 import com.ppx.ws.entity.Greeting;
 import com.ppx.ws.entity.HelloMessage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,12 +11,16 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.security.Principal;
 
 @Controller
 
 public class MsgController {
+
+
 
     @Autowired
     SimpMessagingTemplate simpMessagingTemplate;
@@ -49,6 +54,19 @@ public class MsgController {
 //        simpMessagingTemplate.convertAndSend("/topic/ssmsg","finished test");
 //        return "";
 //    }
+
+    @GetMapping("/userList")
+    @ResponseBody
+    public Integer getUserList(){
+        String allUser="";
+        for (String s :
+                Contains.LIST) {
+            allUser += s + ",";
+        }
+        simpMessagingTemplate.convertAndSend("/topic/userList",allUser);
+        return Contains.LIST.size();
+
+    }
 
 
     @MessageMapping("/ppx/chat")
