@@ -28,6 +28,7 @@
         <module>ppx-power</module>
         <module>ppx-core</module>
         <module>ppx-zuul</module>
+        <module>ppx-sleuth</module>
         <!--        <module>learn-mybatis</module>-->
         <!--        <module>ppx-px-web</module>-->
     </modules>

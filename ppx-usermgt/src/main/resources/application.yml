@@ -10,6 +10,12 @@ spring:
   application:
     name: ppx-userManagement
 
+  zipkin:
+    base-url: http://localhost:9411  #指定Zipkin server地址
+    sleuth:
+      sampler:
+        probability: 1
+
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     hikari:
@@ -31,6 +37,7 @@ spring:
 #    hibernate.ddl-auto:update
 #logging:
 #  config: logback.xml
+
 feign:
   hystrix:
     enabled: true
