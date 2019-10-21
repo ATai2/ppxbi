@@ -84,6 +84,8 @@
         <!--        winxin-->
         <wx.versin>3.3.0</wx.versin>
 
+        <curator.version>2.13.0</curator.version>
+
     </properties>
 
     <dependencyManagement>
