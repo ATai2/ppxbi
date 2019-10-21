@@ -14,7 +14,7 @@ public class ZkLock implements DistriLock {
     private ThreadLocal<String> currentNodeName=new ThreadLocal<>();
 
     public void init() {
-        if (zk == null) {
+        if (zk.get() == null) {
             try {
                 zk.set(new ZooKeeper("localhost:2181", 5000,
                         new Watcher() {
@@ -23,7 +23,14 @@ public class ZkLock implements DistriLock {
 
                     }
                 }));
+                byte[] data = zk.get().getData(LOCK_NAME, false, null);
+                zk.get().create(LOCK_NAME, "0".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE,
+                        CreateMode.PERSISTENT);
             } catch (IOException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (KeeperException e) {
                 e.printStackTrace();
             }
         }
@@ -61,9 +68,11 @@ public class ZkLock implements DistriLock {
                     public void process(WatchedEvent event) {
                         if (Event.EventType.NodeDeleted.equals(event.getType())) {
                             countDownLatch.countDown();
+                            System.out.println(Thread.currentThread().getName()+" notified.");
                         }
                     }
                 });
+                System.out.println(Thread.currentThread().getName()+" blocked.");
                 countDownLatch.await();
                 return true;
             }
