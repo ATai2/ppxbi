@@ -87,7 +87,7 @@ public class ZkLock implements DistriLock {
     public void unLock() {
         try {
             zk.get().delete(currentNodeName.get(),-1);
-            currentNodeName=null;
+            currentNodeName.set(null);
             zk.get().close();
         } catch (InterruptedException | KeeperException e) {
             e.printStackTrace();
