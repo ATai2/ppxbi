@@ -1,19 +1,17 @@
 package com.ppx.dubbo.spi;
 
-import org.apache.dubbo.common.URL;
+public class CarWrapper implements CarInterface {
 
-public class CarWrapper implements CarUrlInterface {
+    private CarInterface carInterface;
 
-    private CarUrlInterface carUrlInterface;
-
-    public CarWrapper(CarUrlInterface carUrlInterface) {
-        this.carUrlInterface = carUrlInterface;
+    public CarWrapper(CarInterface carInterface) {
+        this.carInterface = carInterface;
     }
 
     @Override
-    public void getColor(URL url) {
+    public void getColor() {
         System.out.println("before");
-        carUrlInterface.getColor(url);
+        carInterface.getColor();
         System.out.println("after");
     }
 }

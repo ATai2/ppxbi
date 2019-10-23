@@ -11,8 +11,8 @@ public class BenzCar implements CarUrlInterface {
     }
 
     @Override
-    public void getColor(URL url) {
+    public void getSize(URL url) {
         System.out.println("benz");
-        carUrlInterface.getColor(url);
+        carUrlInterface.getSize(url);
     }
 }

@@ -1,2 +1,3 @@
-com.ppx.dubbo.spi.RedCar
-com.ppx.dubbo.spi.BlackCar
+red=com.ppx.dubbo.spi.RedCar
+black=com.ppx.dubbo.spi.BlackCar
+com.ppx.dubbo.spi.CarWrapper

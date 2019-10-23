@@ -1,12 +1,11 @@
 package com.ppx.dubbo.spi;
 
+import org.apache.dubbo.common.extension.ExtensionLoader;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Iterator;
 import java.util.ServiceLoader;
-
-import static org.junit.Assert.*;
 
 public class CarInterfaceTest {
 
@@ -23,5 +22,14 @@ public class CarInterfaceTest {
             CarInterface carInterface = iterator.next();
             carInterface.getColor();
         }
+    }
+
+    @Test
+    public void testDubbo(){
+        ExtensionLoader<CarInterface> extensionLoader = ExtensionLoader.getExtensionLoader(CarInterface.class);
+        CarInterface carInterface= extensionLoader.getExtension("red");
+
+        carInterface.getColor();
+
     }
 }
