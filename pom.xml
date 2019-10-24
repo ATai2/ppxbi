@@ -19,7 +19,6 @@
         <!--        <module>ppx-member</module>-->
         <!--        <module>ppx-message</module>-->
         <module>ppx-wx-api</module>
-        <module>ppx-order</module>
         <module>ppx-pay</module>
         <module>ppx-txmanager</module>
         <module>ppx-litemall-db</module>
