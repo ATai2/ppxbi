@@ -5,4 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserDao extends JpaRepository<PpxUser, Long> {
     PpxUser findByUserName(String userName);
+
+    PpxUser findByUserId(Long id);
 }
