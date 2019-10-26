@@ -20,6 +20,7 @@ public class KafkaConsumerDemo {
         KafkaConsumer<String,String> kafkaConsumer=new KafkaConsumer<String, String>(properties);
         kafkaConsumer.subscribe(Collections.singletonList("test_topic"));
 
+        kafkaConsumer.commitAsync();
         while (true) {
             ConsumerRecords<String, String> poll = kafkaConsumer.poll(500);
             for (ConsumerRecord<String, String> context :

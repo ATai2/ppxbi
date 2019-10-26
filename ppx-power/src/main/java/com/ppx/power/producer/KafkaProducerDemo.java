@@ -23,7 +23,5 @@ public class KafkaProducerDemo {
         kafkaProducer.close();
 
 
-
-
     }
 }
