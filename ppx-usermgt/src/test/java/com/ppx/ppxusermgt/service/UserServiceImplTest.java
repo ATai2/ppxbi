@@ -17,10 +17,26 @@ public class UserServiceImplTest {
     @Test
     public void insertUser() {
         valueOperations.set("1","1");
+//        ConcurrentHashMap
+//        HashMap
         System.out.println(valueOperations.get("1"));
     }
 
     @Test
     public void synchronizedSelectUserById() {
+//        Collections.emptyList().stream().reduce()
+        while (true) {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(90000000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+        }
     }
 }
