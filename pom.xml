@@ -31,6 +31,7 @@
         <module>dubbo-hello</module>
         <module>dubbo-consumer</module>
         <module>nettylearn</module>
+        <module>ppx-soufang</module>
         <!--        <module>learn-mybatis</module>-->
         <!--        <module>ppx-px-web</module>-->
     </modules>
