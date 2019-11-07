@@ -1,6 +1,6 @@
 package com.ppx.soufang.base;
 
-import com.imooc.entity.User;
+import com.ppx.soufang.entity.User;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 import java.util.regex.Pattern;
