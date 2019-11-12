@@ -18,7 +18,6 @@ import java.util.Map;
 class SystemInistService {
     private SystemInistService systemInistService;
 
-
     @Autowired
     private Environment environment;
 

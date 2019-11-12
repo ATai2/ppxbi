@@ -31,7 +31,6 @@ public class LoginServiceImpl implements ILoginService {
         return user;
     }
 
-
     @Override
     public Role addRole(Map<String, Object> map) {
         User user = userRepository.getOne(Long.valueOf((String) map.get("userId")));

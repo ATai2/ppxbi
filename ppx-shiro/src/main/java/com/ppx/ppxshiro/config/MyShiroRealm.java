@@ -21,7 +21,6 @@ public class MyShiroRealm extends AuthorizingRealm {
 
     /**
      * 角色权限和对应权限添加
-     *
      * @param principalCollection
      * @return
      */
