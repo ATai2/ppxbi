@@ -9,10 +9,10 @@ import com.ppx.soufang.service.ServiceResult;
 import com.ppx.soufang.service.house.IHouseService;
 import com.ppx.soufang.web.dto.HouseDTO;
 import com.ppx.soufang.web.dto.HouseSubscribeDTO;
-import org.apache.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Pair;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -48,14 +48,14 @@ public class UserController {
         }
 
         if ("email".equals(profile) && !LoginUserUtil.checkEmail(value)) {
-            return ApiResponse.ofMessage(HttpStatus.SC_BAD_REQUEST, "不支持的邮箱格式");
+            return ApiResponse.ofMessage(HttpStatus.BAD_REQUEST.value(), "不支持的邮箱格式");
         }
 
         ServiceResult result = userService.modifyUserProfile(profile, value);
         if (result.isSuccess()) {
             return ApiResponse.ofSuccess("");
         } else {
-            return ApiResponse.ofMessage(HttpStatus.SC_BAD_REQUEST, result.getMessage());
+            return ApiResponse.ofMessage(HttpStatus.BAD_REQUEST.value(), result.getMessage());
         }
 
     }
@@ -67,7 +67,7 @@ public class UserController {
         if (result.isSuccess()) {
             return ApiResponse.ofSuccess("");
         } else {
-            return ApiResponse.ofMessage(HttpStatus.SC_BAD_REQUEST, result.getMessage());
+            return ApiResponse.ofMessage(HttpStatus.BAD_REQUEST.value(), result.getMessage());
         }
     }
 
@@ -98,18 +98,18 @@ public class UserController {
             @RequestParam(value = "telephone") String telephone
             ) {
         if (orderTime == null) {
-            return ApiResponse.ofMessage(HttpStatus.SC_BAD_REQUEST, "请选择预约时间");
+            return ApiResponse.ofMessage(HttpStatus.BAD_REQUEST.value(), "请选择预约时间");
         }
 
         if (!LoginUserUtil.checkTelephone(telephone)) {
-            return ApiResponse.ofMessage(HttpStatus.SC_BAD_REQUEST, "手机格式不正确");
+            return ApiResponse.ofMessage(HttpStatus.BAD_REQUEST.value(), "手机格式不正确");
         }
 
         ServiceResult serviceResult = houseService.subscribe(houseId, orderTime, telephone, desc);
         if (serviceResult.isSuccess()) {
             return ApiResponse.ofStatus(ApiResponse.Status.SUCCESS);
         } else {
-            return ApiResponse.ofMessage(HttpStatus.SC_BAD_REQUEST, serviceResult.getMessage());
+            return ApiResponse.ofMessage(HttpStatus.BAD_REQUEST.value(), serviceResult.getMessage());
         }
     }
 
@@ -120,7 +120,7 @@ public class UserController {
         if (serviceResult.isSuccess()) {
             return ApiResponse.ofStatus(ApiResponse.Status.SUCCESS);
         } else {
-            return ApiResponse.ofMessage(HttpStatus.SC_BAD_REQUEST, serviceResult.getMessage());
+            return ApiResponse.ofMessage(HttpStatus.BAD_REQUEST.value(), serviceResult.getMessage());
         }
     }
 }

@@ -18,6 +18,7 @@ import com.ppx.soufang.web.form.DatatableSearch;
 import com.ppx.soufang.web.form.HouseForm;
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Pair;
 import org.springframework.http.HttpStatus;
@@ -36,6 +37,7 @@ import java.util.Map;
 /**
  * Created by 瓦力.
  */
+@Api(value = "soufang")
 @Controller
 public class AdminController {
     @Autowired
