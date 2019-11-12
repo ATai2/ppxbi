@@ -1,7 +1,7 @@
 package com.ppx.ppxusermgt.template;
 
 
-import com.ppx.core.net.CommonResp;
+import com.ppx.ppxusermgt.entity.CommonResp;
 import com.ppx.ppxusermgt.entity.NullValueResultDO;
 import com.ppx.ppxusermgt.filter.RedisBloomFilter;
 import com.ppx.ppxusermgt.utils.RedisLock;

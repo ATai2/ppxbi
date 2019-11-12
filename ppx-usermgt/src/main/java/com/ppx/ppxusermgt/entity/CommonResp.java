@@ -1,12 +1,12 @@
 package com.ppx.ppxusermgt.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
+import lombok.experimental.Accessors;
 
 @Setter
 @Getter
 @ToString
+@Accessors(chain = true)
 public class CommonResp<T> {
     public static final String SUCCESS = "SUCCESS";
     private int code=0;

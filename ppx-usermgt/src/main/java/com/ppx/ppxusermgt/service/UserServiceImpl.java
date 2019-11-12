@@ -1,7 +1,7 @@
 package com.ppx.ppxusermgt.service;
 
-import com.ppx.core.net.CommonResp;
 import com.ppx.ppxusermgt.dao.UserDao;
+import com.ppx.ppxusermgt.entity.CommonResp;
 import com.ppx.ppxusermgt.entity.NullValueResultDO;
 import com.ppx.ppxusermgt.entity.PpxUser;
 import org.springframework.beans.factory.annotation.Autowired;

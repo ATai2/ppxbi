@@ -1,6 +1,6 @@
 package com.ppx.ppxusermgt.controller;
 
-import com.ppx.core.net.CommonResp;
+import com.ppx.ppxusermgt.entity.CommonResp;
 import com.ppx.ppxusermgt.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
