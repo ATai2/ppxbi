@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="dubbo-hello" />
+        <module name="ppx-pay" />
+        <module name="ppx-usermgt" />
+        <module name="soufang" />
+        <module name="ppx-admin" />
+        <module name="ppx-litemall-db" />
+        <module name="ppx-power" />
+        <module name="ppx-core" />
+        <module name="ppx-shiro-mybatis" />
+        <module name="ppx-util" />
+        <module name="ppx-gateway" />
+        <module name="dubbo-consumer" />
+        <module name="ppx-eureka" />
+        <module name="ppx-sleuth" />
+        <module name="ppx-ws" />
+        <module name="ppx-zuul" />
+        <module name="ppx-config" />
+        <module name="ppx-wx-api" />
+        <module name="ppx-common" />
+        <module name="ppx-txmanager" />
+        <module name="nettylearn" />
+        <module name="ppx-shiro" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bipro" target="1.8" />
+      <module name="dubbo-consumer" target="1.8" />
+      <module name="dubbo-hello" target="1.8" />
+      <module name="learn" target="1.8" />
+      <module name="nettylearn" target="1.8" />
+      <module name="ppx-admin" target="1.8" />
+      <module name="ppx-common" target="1.8" />
+      <module name="ppx-config" target="1.8" />
+      <module name="ppx-core" target="1.8" />
+      <module name="ppx-eureka" target="1.8" />
+      <module name="ppx-gateway" target="1.8" />
+      <module name="ppx-litemall-db" target="1.8" />
+      <module name="ppx-pay" target="1.8" />
+      <module name="ppx-power" target="1.8" />
+      <module name="ppx-shiro" target="1.8" />
+      <module name="ppx-shiro-mybatis" target="1.8" />
+      <module name="ppx-sleuth" target="1.8" />
+      <module name="ppx-txmanager" target="1.8" />
+      <module name="ppx-usermgt" target="1.8" />
+      <module name="ppx-util" target="1.8" />
+      <module name="ppx-ws" target="1.8" />
+      <module name="ppx-wx-api" target="1.8" />
+      <module name="ppx-zuul" target="1.8" />
+      <module name="soufang" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dubbo-consumer" options="-parameters" />
+      <module name="dubbo-hello" options="-parameters" />
+      <module name="nettylearn" options="-parameters" />
+      <module name="ppx-admin" options="-parameters" />
+      <module name="ppx-common" options="-parameters" />
+      <module name="ppx-config" options="-parameters" />
+      <module name="ppx-core" options="-parameters" />
+      <module name="ppx-eureka" options="-parameters" />
+      <module name="ppx-gateway" options="-parameters" />
+      <module name="ppx-litemall-db" options="-parameters" />
+      <module name="ppx-pay" options="-parameters" />
+      <module name="ppx-power" options="-parameters" />
+      <module name="ppx-shiro" options="-parameters" />
+      <module name="ppx-shiro-mybatis" options="-parameters" />
+      <module name="ppx-sleuth" options="-parameters" />
+      <module name="ppx-txmanager" options="-parameters" />
+      <module name="ppx-usermgt" options="-parameters" />
+      <module name="ppx-util" options="-parameters" />
+      <module name="ppx-ws" options="-parameters" />
+      <module name="ppx-wx-api" options="-parameters" />
+      <module name="ppx-zuul" options="-parameters" />
+      <module name="soufang" options="-parameters" />
+    </option>
+  </component>
+</project>

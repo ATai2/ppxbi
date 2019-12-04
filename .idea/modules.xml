@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bipro.iml" filepath="$PROJECT_DIR$/bipro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-consumer/dubbo-consumer.iml" filepath="$PROJECT_DIR$/dubbo-consumer/dubbo-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-hello/dubbo-hello.iml" filepath="$PROJECT_DIR$/dubbo-hello/dubbo-hello.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn/learn.iml" filepath="$PROJECT_DIR$/learn/learn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nettylearn/nettylearn.iml" filepath="$PROJECT_DIR$/nettylearn/nettylearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-admin/ppx-admin.iml" filepath="$PROJECT_DIR$/ppx-admin/ppx-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-common/ppx-common.iml" filepath="$PROJECT_DIR$/ppx-common/ppx-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-config/ppx-config.iml" filepath="$PROJECT_DIR$/ppx-config/ppx-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-core/ppx-core.iml" filepath="$PROJECT_DIR$/ppx-core/ppx-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-euraka/ppx-eureka.iml" filepath="$PROJECT_DIR$/ppx-euraka/ppx-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-gateway/ppx-gateway.iml" filepath="$PROJECT_DIR$/ppx-gateway/ppx-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-litemall-db/ppx-litemall-db.iml" filepath="$PROJECT_DIR$/ppx-litemall-db/ppx-litemall-db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-pay/ppx-pay.iml" filepath="$PROJECT_DIR$/ppx-pay/ppx-pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-power/ppx-power.iml" filepath="$PROJECT_DIR$/ppx-power/ppx-power.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-shiro/ppx-shiro.iml" filepath="$PROJECT_DIR$/ppx-shiro/ppx-shiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-shiro-mybatis/ppx-shiro-mybatis.iml" filepath="$PROJECT_DIR$/ppx-shiro-mybatis/ppx-shiro-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-sleuth/ppx-sleuth.iml" filepath="$PROJECT_DIR$/ppx-sleuth/ppx-sleuth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-txmanager/ppx-txmanager.iml" filepath="$PROJECT_DIR$/ppx-txmanager/ppx-txmanager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-usermgt/ppx-usermgt.iml" filepath="$PROJECT_DIR$/ppx-usermgt/ppx-usermgt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-util/ppx-util.iml" filepath="$PROJECT_DIR$/ppx-util/ppx-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-ws/ppx-ws.iml" filepath="$PROJECT_DIR$/ppx-ws/ppx-ws.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-wx-api/ppx-wx-api.iml" filepath="$PROJECT_DIR$/ppx-wx-api/ppx-wx-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-zuul/ppx-zuul.iml" filepath="$PROJECT_DIR$/ppx-zuul/ppx-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ppx-soufang/soufang.iml" filepath="$PROJECT_DIR$/ppx-soufang/soufang.iml" />
+    </modules>
+  </component>
+</project>
