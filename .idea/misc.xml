@@ -12,9 +12,13 @@
         <option value="$PROJECT_DIR$/dubbo-hello/pom.xml" />
         <option value="$PROJECT_DIR$/learn/pom.xml" />
         <option value="$PROJECT_DIR$/nettylearn/pom.xml" />
+        <option value="$PROJECT_DIR$/ppx-admin/pom.xml" />
         <option value="$PROJECT_DIR$/ppx-litemall-db/pom.xml" />
+        <option value="$PROJECT_DIR$/ppx-pay/pom.xml" />
         <option value="$PROJECT_DIR$/ppx-power/pom.xml" />
+        <option value="$PROJECT_DIR$/ppx-sleuth/pom.xml" />
         <option value="$PROJECT_DIR$/ppx-soufang/pom.xml" />
+        <option value="$PROJECT_DIR$/ppx-txmanager/pom.xml" />
         <option value="$PROJECT_DIR$/ppx-ws/pom.xml" />
         <option value="$PROJECT_DIR$/ppx-wx-api/pom.xml" />
       </set>

@@ -6,18 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ppx-pay" />
         <module name="ppx-shiro" />
-        <module name="ppx-admin" />
         <module name="ppx-usermgt" />
         <module name="ppx-util" />
-        <module name="ppx-zuul" />
-        <module name="ppx-sleuth" />
+      </profile>
+      <profile name="Annotation profile for bipro" enabled="true">
+        <sourceOutputDir name="../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
         <module name="ppx-gateway" />
+        <module name="ppx-common" />
+        <module name="ppx-zuul" />
         <module name="ppx-eureka" />
         <module name="ppx-config" />
-        <module name="ppx-txmanager" />
-        <module name="ppx-common" />
         <module name="ppx-shiro-mybatis" />
         <module name="ppx-core" />
       </profile>

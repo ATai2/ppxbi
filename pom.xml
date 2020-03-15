@@ -10,17 +10,13 @@
         <module>ppx-euraka</module>
         <module>ppx-config</module>
         <module>ppx-gateway</module>
-        <module>ppx-admin</module>
         <module>ppx-usermgt</module>
         <module>ppx-util</module>
         <module>ppx-shiro</module>
         <module>ppx-shiro-mybatis</module>
         <module>ppx-common</module>
-        <module>ppx-pay</module>
-        <module>ppx-txmanager</module>
         <module>ppx-core</module>
         <module>ppx-zuul</module>
-        <module>ppx-sleuth</module>
     </modules>
     <packaging>pom</packaging>
 
