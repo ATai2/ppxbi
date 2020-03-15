@@ -9,8 +9,6 @@
         <module name="ppx-pay" />
         <module name="ppx-shiro" />
         <module name="ppx-admin" />
-        <module name="ppx-litemall-db" />
-        <module name="ppx-power" />
         <module name="ppx-usermgt" />
         <module name="ppx-util" />
         <module name="ppx-zuul" />

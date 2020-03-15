@@ -2,8 +2,223 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab938dff-eb54-428b-8c0a-88dfd4ada7e8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo-hello/src/main/resources/dubbo-provider.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo-hello/src/main/resources/dubbo-provider.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/mybatis-generator/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/PpxLitemallDbApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/GoodsProductMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallAdMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallAddressMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallAdminMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallBrandMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallCartMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallCategoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallCollectMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallCommentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallCouponMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallCouponUserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallFeedbackMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallFootprintMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallGoodsAttributeMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallGoodsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallGoodsProductMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallGoodsSpecificationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallGrouponMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallGrouponRulesMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallIssueMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallKeywordMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallLogMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallOrderGoodsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallOrderMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallPermissionMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallRegionMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallRoleMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallSearchHistoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallStorageMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallSystemMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallTopicMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallUserFormidMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/LitemallUserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/OrderMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/dao/StatMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallAd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallAdExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallAddress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallAddressExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallAdmin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallAdminExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallBrand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallBrandExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallCart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallCartExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallCategoryExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallCollect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallCollectExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallComment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallCommentExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallCoupon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallCouponExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallCouponUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallCouponUserExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallFeedback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallFeedbackExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallFootprint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallFootprintExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallGoods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallGoodsAttribute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallGoodsAttributeExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallGoodsExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallGoodsProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallGoodsProductExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallGoodsSpecification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallGoodsSpecificationExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallGroupon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallGrouponExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallGrouponRules.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallGrouponRulesExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallIssue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallIssueExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallKeyword.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallKeywordExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallLog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallLogExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallOrderExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallOrderGoods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallOrderGoodsExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallPermission.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallPermissionExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallRegion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallRegionExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallRoleExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallSearchHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallSearchHistoryExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallStorage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallStorageExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallSystemExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallTopic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallTopicExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallUserExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallUserFormid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/LitemallUserFormidExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/domain/UserVo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/mybatis/JsonIntegerArrayTypeHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/mybatis/JsonNodeTypeHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/mybatis/JsonStringArrayTypeHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/CouponAssignService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/CouponVerifyService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallAdService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallAddressService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallAdminService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallBrandService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallCartService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallCategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallCollectService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallCommentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallCouponService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallCouponUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallFeedbackService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallFootprintService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallGoodsAttributeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallGoodsProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallGoodsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallGoodsSpecificationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallGrouponRulesService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallGrouponService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallIssueService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallKeywordService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallLogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallOrderGoodsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallOrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallPermissionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallRegionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallRoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallSearchHistoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallStorageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallSystemConfigService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallTopicService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallUserFormIdService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/LitemallUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/service/StatService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/util/CouponConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/util/CouponUserConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/util/OrderHandleOption.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/java/com/ppx/ppxlitemalldb/util/OrderUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/application-db.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallAdMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallAddressMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallAdminMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallBrandMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallCartMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallCategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallCollectMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallCommentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallCouponMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallCouponUserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallFeedbackMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallFootprintMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallGoodsAttributeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallGoodsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallGoodsProductMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallGoodsSpecificationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallGrouponMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallGrouponRulesMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallIssueMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallKeywordMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallOrderGoodsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallOrderMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallPermissionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallRegionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallRoleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallSearchHistoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallStorageMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallSystemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallTopicMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallUserFormidMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/main/resources/com/ppx/ppxlitemalldb/dao/LitemallUserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/test/java/com/ppx/ppxlitemalldb/dao/LitemallSystemMapperTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-litemall-db/src/test/java/com/ppx/ppxlitemalldb/service/LitemallUserServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/config/MqConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/config/MyConfirmCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/config/Swagger2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/consumer/Consumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/consumer/KafkaConsumerDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/consumer/RabbitMQReceiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/controller/PowerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/controller/RabbitMqController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/controller/ZkController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/entity/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/event/MyEventMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/event/StartEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/event/StartListner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/producer/KafkaProducerDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/producer/Producer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/producer/RabbitMQMessageSend.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/redis/RedesUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/service/ZkService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/java/com/ppx/power/utils/ConnectionUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/test/java/com/ppx/power/consumer/ConsumerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/test/java/com/ppx/power/consumer/KafkaConsumerDemoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/test/java/com/ppx/power/event/MyEventMainTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/test/java/com/ppx/power/producer/KafkaProducerDemoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/test/java/com/ppx/power/producer/ProducerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/test/java/com/ppx/power/redis/RedesUtilsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/test/java/com/ppx/power/service/ZkCuratorServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/test/java/com/ppx/power/service/ZkLeaderLatchTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ppx-power/src/test/java/com/ppx/power/service/ZkServiceTest.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +235,8 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.4862069" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -88,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575466994499</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1">
+      <created>1584245161268</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584245161268</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

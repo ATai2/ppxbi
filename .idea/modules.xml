@@ -9,9 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/ppx-core/ppx-core.iml" filepath="$PROJECT_DIR$/ppx-core/ppx-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/ppx-euraka/ppx-eureka.iml" filepath="$PROJECT_DIR$/ppx-euraka/ppx-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/ppx-gateway/ppx-gateway.iml" filepath="$PROJECT_DIR$/ppx-gateway/ppx-gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ppx-litemall-db/ppx-litemall-db.iml" filepath="$PROJECT_DIR$/ppx-litemall-db/ppx-litemall-db.iml" />
       <module fileurl="file://$PROJECT_DIR$/ppx-pay/ppx-pay.iml" filepath="$PROJECT_DIR$/ppx-pay/ppx-pay.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ppx-power/ppx-power.iml" filepath="$PROJECT_DIR$/ppx-power/ppx-power.iml" />
       <module fileurl="file://$PROJECT_DIR$/ppx-shiro/ppx-shiro.iml" filepath="$PROJECT_DIR$/ppx-shiro/ppx-shiro.iml" />
       <module fileurl="file://$PROJECT_DIR$/ppx-shiro-mybatis/ppx-shiro-mybatis.iml" filepath="$PROJECT_DIR$/ppx-shiro-mybatis/ppx-shiro-mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/ppx-sleuth/ppx-sleuth.iml" filepath="$PROJECT_DIR$/ppx-sleuth/ppx-sleuth.iml" />
