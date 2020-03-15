@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: hello
-
-
-server:
-  port: 8000

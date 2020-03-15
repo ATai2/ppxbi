@@ -6,6 +6,17 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/dubbo-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbo-hello/pom.xml" />
+        <option value="$PROJECT_DIR$/learn/pom.xml" />
+        <option value="$PROJECT_DIR$/nettylearn/pom.xml" />
+        <option value="$PROJECT_DIR$/ppx-soufang/pom.xml" />
+        <option value="$PROJECT_DIR$/ppx-ws/pom.xml" />
+        <option value="$PROJECT_DIR$/ppx-wx-api/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/classes" />

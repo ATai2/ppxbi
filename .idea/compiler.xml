@@ -6,28 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dubbo-hello" />
         <module name="ppx-pay" />
-        <module name="ppx-usermgt" />
-        <module name="soufang" />
+        <module name="ppx-shiro" />
         <module name="ppx-admin" />
         <module name="ppx-litemall-db" />
         <module name="ppx-power" />
-        <module name="ppx-core" />
-        <module name="ppx-shiro-mybatis" />
+        <module name="ppx-usermgt" />
         <module name="ppx-util" />
-        <module name="ppx-gateway" />
-        <module name="dubbo-consumer" />
-        <module name="ppx-eureka" />
-        <module name="ppx-sleuth" />
-        <module name="ppx-ws" />
         <module name="ppx-zuul" />
+        <module name="ppx-sleuth" />
+        <module name="ppx-gateway" />
+        <module name="ppx-eureka" />
         <module name="ppx-config" />
-        <module name="ppx-wx-api" />
-        <module name="ppx-common" />
         <module name="ppx-txmanager" />
-        <module name="nettylearn" />
-        <module name="ppx-shiro" />
+        <module name="ppx-common" />
+        <module name="ppx-shiro-mybatis" />
+        <module name="ppx-core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
