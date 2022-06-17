@@ -36,7 +36,7 @@
         <springboot.version>2.1.6.RELEASE</springboot.version>
         <!--        db-->
         <druid.version>1.1.10</druid.version>
-        <alibaba.version>1.2.59</alibaba.version>
+        <alibaba.version>1.2.83</alibaba.version>
         <mybatisplus-spring-boot-starter.version>1.0.5</mybatisplus-spring-boot-starter.version>
         <mybatis-spring-boot-starter.version>2.0.0</mybatis-spring-boot-starter.version>
         <mybatis-plus.version>2.3</mybatis-plus.version>
@@ -53,7 +53,7 @@
 
         <!--        utils-->
         <shiro.version>1.4.0</shiro.version>
-        <fastjson.version>1.2.47</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <velocity.version>1.7</velocity.version>
         <!--<kaptcha.version>2.3.2</kaptcha.version>-->
         <ehcache.version>3.3.1</ehcache.version>
